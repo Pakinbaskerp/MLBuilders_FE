@@ -1,0 +1,20 @@
+:root,
+[data-theme='light'] {
+  --ml-primary: #0b3c9a;
+  --ml-secondary: #1e63d6;
+  --ml-accent: #f05a0a;
+  --ml-white: #ffffff;
+  --ml-bg-light: #f4f8ff;
+  --ml-text: #1c1c1c;
+  --ml-text-secondary: #5a6b8c;
+}
+
+[data-theme='dark'] {
+  --ml-primary: #85aef9;
+  --ml-secondary: #9fc0ff;
+  --ml-accent: #ff8f51;
+  --ml-white: #111111;
+  --ml-bg-light: #0f172a;
+  --ml-text: #f8f9ff;
+  --ml-text-secondary: #c0c8db;
+}

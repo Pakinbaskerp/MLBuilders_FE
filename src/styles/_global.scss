@@ -1,0 +1,32 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'IBM Plex Sans', sans-serif;
+  color: var(--ml-text);
+  background-color: var(--ml-white);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+label,
+.form-label,
+.badge {
+  font-family: 'IBM Plex Mono', monospace;
+}
+
+.text-secondary {
+  color: var(--ml-text-secondary) !important;
+}
+
+.bg-light-blue {
+  background-color: var(--ml-bg-light);
+}

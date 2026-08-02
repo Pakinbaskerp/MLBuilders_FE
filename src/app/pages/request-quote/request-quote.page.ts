@@ -1,0 +1,53 @@
+import { Component, inject } from '@angular/core';
+import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
+import { PageLayoutComponent } from '../../layouts/page-layout/page-layout.component';
+import { BootstrapModalComponent } from '../../shared/components/bootstrap-modal/bootstrap-modal.component';
+
+@Component({
+  selector: 'app-request-quote-page',
+  standalone: true,
+  imports: [ReactiveFormsModule, PageLayoutComponent, BootstrapModalComponent],
+  template: `
+    <app-page-layout
+      eyebrow="Request Quote"
+      title="Request a Quote"
+      subtitle="Reactive form scaffold is ready for API integration and validation enhancements."
+    >
+      <form class="row g-3" [formGroup]="quoteForm" novalidate>
+        <div class="col-12 col-md-6">
+          <label for="name" class="form-label">Full Name</label>
+          <input id="name" type="text" class="form-control" formControlName="name" />
+        </div>
+        <div class="col-12 col-md-6">
+          <label for="phone" class="form-label">Phone</label>
+          <input id="phone" type="tel" class="form-control" formControlName="phone" />
+        </div>
+        <div class="col-12">
+          <label for="message" class="form-label">Project Requirement</label>
+          <textarea id="message" rows="4" class="form-control" formControlName="message"></textarea>
+        </div>
+        <div class="col-12 d-flex justify-content-end">
+          <button type="button" class="btn btn-ml-outline me-2" data-bs-toggle="modal" data-bs-target="#quotePreviewModal">
+            Preview
+          </button>
+          <button type="submit" class="btn btn-ml-primary" [disabled]="quoteForm.invalid">
+            Submit Request
+          </button>
+        </div>
+      </form>
+
+      <app-bootstrap-modal modalId="quotePreviewModal" title="Quote Request Preview" actionText="Continue">
+        <p class="mb-0 text-secondary">This modal scaffold is ready for confirmation or stepper flows.</p>
+      </app-bootstrap-modal>
+    </app-page-layout>
+  `
+})
+export class RequestQuotePageComponent {
+  private readonly fb = inject(FormBuilder);
+
+  protected readonly quoteForm = this.fb.nonNullable.group({
+    name: ['', [Validators.required, Validators.minLength(2)]],
+    phone: ['', [Validators.required, Validators.minLength(8)]],
+    message: ['', [Validators.required, Validators.minLength(10)]]
+  });
+}
