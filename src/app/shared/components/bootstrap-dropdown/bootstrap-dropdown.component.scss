@@ -1,0 +1,12 @@
+.dropdown-item {
+  &:hover,
+  &:focus {
+    background-color: #0b3c9a;
+    color: #ffffff;
+  }
+
+  &:active {
+    background-color: #f05a0a;
+    color: #ffffff;
+  }
+}

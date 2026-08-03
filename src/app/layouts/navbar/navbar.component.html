@@ -1,0 +1,51 @@
+<nav class="navbar navbar-expand-lg bg-white py-3">
+  <div class="container">
+    <a class="navbar-brand fw-bold text-primary" routerLink="/" aria-label="ML Builders home">
+      ML Builders
+    </a>
+
+    <div class="d-flex align-items-center gap-2 order-lg-3">
+      <button
+        type="button"
+        class="btn btn-ml-outline d-none d-lg-inline-flex"
+        (click)="themeService.toggleTheme()"
+        aria-label="Toggle light and dark theme"
+      >
+        <i class="bi" [class.bi-moon-stars-fill]="!themeService.isDarkMode()" [class.bi-sun-fill]="themeService.isDarkMode()"></i>
+      </button>
+      <a class="btn btn-call d-none d-lg-inline-flex" [href]="callLink" aria-label="Call now">
+        <i class="bi bi-telephone-fill me-2"></i>Call Now
+      </a>
+      <a class="btn btn-ml-orange d-none d-lg-inline-flex" routerLink="/request-quote" aria-label="Request quote">
+        Request Quote
+      </a>
+      <button
+        class="navbar-toggler border-0 d-lg-none"
+        type="button"
+        data-bs-toggle="offcanvas"
+        data-bs-target="#mlOffcanvasMenu"
+        aria-controls="mlOffcanvasMenu"
+        aria-label="Toggle navigation menu"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </div>
+
+    <div class="collapse navbar-collapse order-lg-2">
+      <ul class="navbar-nav mx-auto gap-lg-2">
+        @for (item of navigationService.navLinks(); track item.path) {
+          <li class="nav-item">
+            <a
+              class="nav-link fw-medium"
+              [routerLink]="item.path"
+              routerLinkActive="active text-primary"
+              [routerLinkActiveOptions]="{ exact: item.path === '/' }"
+            >
+              {{ item.label }}
+            </a>
+          </li>
+        }
+      </ul>
+    </div>
+  </div>
+</nav>

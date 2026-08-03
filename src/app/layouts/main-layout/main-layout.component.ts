@@ -9,16 +9,7 @@ import { LoaderComponent } from '../../shared/components/loader/loader.component
   selector: 'app-main-layout',
   standalone: true,
   imports: [RouterOutlet, HeaderComponent, FooterComponent, FloatingButtonsComponent, LoaderComponent],
-  template: `
-    <div class="d-flex flex-column min-vh-100 bg-body">
-      <app-loader />
-      <app-header />
-      <main class="flex-grow-1" id="main-content">
-        <router-outlet />
-      </main>
-      <app-footer />
-      <app-floating-buttons />
-    </div>
-  `
+  templateUrl: './main-layout.component.html',
+  styleUrl: './main-layout.component.scss'
 })
 export class MainLayoutComponent {}

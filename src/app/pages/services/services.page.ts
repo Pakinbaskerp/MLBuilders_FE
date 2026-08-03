@@ -5,14 +5,7 @@ import { PageLayoutComponent } from '../../layouts/page-layout/page-layout.compo
   selector: 'app-services-page',
   standalone: true,
   imports: [PageLayoutComponent],
-  template: `
-    <app-page-layout
-      eyebrow="Services"
-      title="Construction Services"
-      subtitle="Scalable services page shell prepared with Bootstrap-first structure."
-    >
-      <div class="alert alert-light border mb-0">Service categories and detailed cards will be integrated in the next step.</div>
-    </app-page-layout>
-  `
+  templateUrl: './services.page.html',
+  styleUrl: './services.page.scss'
 })
 export class ServicesPageComponent {}

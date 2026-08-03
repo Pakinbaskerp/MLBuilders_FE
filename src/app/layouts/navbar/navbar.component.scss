@@ -1,0 +1,11 @@
+.nav-link {
+  &:hover,
+  &:focus {
+    color: #f05a0a !important;
+  }
+
+  &.active {
+    color: #0b3c9a !important;
+    font-weight: 600;
+  }
+}

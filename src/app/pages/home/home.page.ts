@@ -21,49 +21,8 @@ import { StatisticsCardComponent } from '../../shared/components/statistics-card
     BootstrapCarouselComponent,
     BootstrapDropdownComponent
   ],
-  template: `
-    <app-hero [image]="heroImage" />
-
-    <section class="py-5">
-      <div class="container">
-        <app-section-title
-          eyebrow="Base Setup"
-          title="Homepage Modules"
-          subtitle="Production-ready reusable sections are configured. Final content will be added in the next phase."
-        />
-        <div class="row g-4">
-          <div class="col-12 col-md-6 col-lg-4">
-            <app-service-card [image]="serviceImage" title="Service Card" />
-          </div>
-          <div class="col-12 col-md-6 col-lg-4">
-            <app-statistics-card value="25+" label="Years Experience" />
-          </div>
-          <div class="col-12 col-md-6 col-lg-4">
-            <app-statistics-card value="350+" label="Projects Delivered" />
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="pb-5">
-      <div class="container">
-        <div class="row g-4 align-items-start">
-          <div class="col-12 col-lg-8">
-            <app-bootstrap-carousel [carouselId]="'homeShowcase'" [slides]="carouselImages" />
-          </div>
-          <div class="col-12 col-lg-4 d-flex justify-content-start justify-content-lg-end">
-            <app-bootstrap-dropdown label="Quick Navigation" [items]="quickLinks" />
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="pb-5">
-      <div class="container">
-        <app-cta-banner [image]="projectImage" />
-      </div>
-    </section>
-  `
+  templateUrl: './home.page.html',
+  styleUrl: './home.page.scss'
 })
 export class HomePageComponent {
   protected readonly heroImage = PLACEHOLDER_IMAGES.hero;

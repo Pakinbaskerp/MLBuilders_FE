@@ -1,0 +1,14 @@
+.social-btn {
+  &:hover,
+  &:focus {
+    background-color: #f05a0a;
+    border-color: #f05a0a;
+    color: #ffffff;
+  }
+
+  &:active {
+    background-color: #0b3c9a;
+    border-color: #0b3c9a;
+    color: #ffffff;
+  }
+}

@@ -10,53 +10,8 @@ import { SocialLinksComponent } from '../../shared/components/social-links/socia
   selector: 'app-footer',
   standalone: true,
   imports: [RouterLink, SocialLinksComponent],
-  template: `
-    <footer class="bg-primary text-white pt-5 pb-4 mt-auto">
-      <div class="container">
-        <div class="row g-4">
-          <div class="col-12 col-md-6 col-lg-3">
-            <h3 class="h5">Company</h3>
-            <p class="text-white-50 mb-0">
-              Premium construction and real estate solutions with scalable digital experience.
-            </p>
-          </div>
-
-          <div class="col-6 col-md-3 col-lg-2">
-            <h3 class="h6">Quick Links</h3>
-            <ul class="list-unstyled d-flex flex-column gap-2 mb-0">
-              @for (link of quickLinks; track link.path) {
-                <li>
-                  <a class="text-white-50 text-decoration-none" [routerLink]="link.path">{{ link.label }}</a>
-                </li>
-              }
-            </ul>
-          </div>
-
-          <div class="col-6 col-md-3 col-lg-3">
-            <h3 class="h6">Services</h3>
-            <ul class="list-unstyled d-flex flex-column gap-2 mb-0">
-              @for (link of serviceLinks; track link.label) {
-                <li>
-                  <a class="text-white-50 text-decoration-none" [routerLink]="link.path">{{ link.label }}</a>
-                </li>
-              }
-            </ul>
-          </div>
-
-          <div class="col-12 col-lg-4">
-            <h3 class="h6">Connect</h3>
-            <p class="text-white-50 mb-3">Projects, Gallery, Blog, Contact and social channels.</p>
-            <app-social-links />
-          </div>
-        </div>
-        <hr class="border-light opacity-25 my-4" />
-        <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-center gap-2">
-          <p class="mb-0 text-white-50">© {{ year }} ML Builders. All rights reserved.</p>
-          <p class="mb-0 text-white-50">Built with Angular + Bootstrap base architecture</p>
-        </div>
-      </div>
-    </footer>
-  `
+  templateUrl: './footer.component.html',
+  styleUrl: './footer.component.scss'
 })
 export class FooterComponent {
   protected readonly quickLinks = FOOTER_QUICK_LINKS;

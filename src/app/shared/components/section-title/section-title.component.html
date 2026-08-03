@@ -1,0 +1,15 @@
+<div class="text-center mb-4">
+  @if (image) {
+    <img
+      appLazyImage
+      class="img-fluid mb-3 section-icon"
+      [src]="image.imageUrl"
+      [imageAlt]="image.alt"
+      [imageLoading]="image.loading ?? 'lazy'"
+      [attr.title]="image.title"
+    />
+  }
+  <p class="text-uppercase text-primary fw-semibold mb-2">{{ eyebrow }}</p>
+  <h2 class="h1 fw-bold mb-2">{{ title }}</h2>
+  <p class="text-secondary mb-0">{{ subtitle }}</p>
+</div>

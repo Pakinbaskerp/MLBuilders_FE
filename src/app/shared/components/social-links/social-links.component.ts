@@ -5,23 +5,8 @@ import { Component, Input } from '@angular/core';
   selector: 'app-social-links',
   standalone: true,
   imports: [CommonModule],
-  template: `
-    <ul class="list-unstyled d-flex align-items-center gap-2 mb-0">
-      @for (link of links; track link.label) {
-        <li>
-          <a
-            class="btn btn-outline-light btn-sm rounded-circle"
-            [href]="link.url"
-            [attr.aria-label]="link.label"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <i [class]="link.icon"></i>
-          </a>
-        </li>
-      }
-    </ul>
-  `
+  templateUrl: './social-links.component.html',
+  styleUrl: './social-links.component.scss'
 })
 export class SocialLinksComponent {
   @Input() links: { label: string; url: string; icon: string }[] = [

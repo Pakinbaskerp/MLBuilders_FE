@@ -6,11 +6,7 @@ import { OffcanvasMenuComponent } from '../offcanvas-menu/offcanvas-menu.compone
   selector: 'app-header',
   standalone: true,
   imports: [NavbarComponent, OffcanvasMenuComponent],
-  template: `
-    <header class="sticky-top bg-white border-bottom shadow-sm">
-      <app-navbar />
-      <app-offcanvas-menu />
-    </header>
-  `
+  templateUrl: './header.component.html',
+  styleUrl: './header.component.scss'
 })
 export class HeaderComponent {}

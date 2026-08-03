@@ -8,31 +8,8 @@ import { LazyImageDirective } from '../../directives/lazy-image.directive';
   selector: 'app-cta-banner',
   standalone: true,
   imports: [CommonModule, RouterLink, LazyImageDirective],
-  template: `
-    <section class="bg-primary text-white rounded-4 p-4 p-lg-5">
-      <div class="row align-items-center g-4">
-        <div class="col-12 col-lg-8">
-          <h3 class="h2 mb-2">{{ title }}</h3>
-          <p class="mb-3 text-white-50">{{ description }}</p>
-          <a [routerLink]="actionLink" class="btn btn-ml-orange">{{ actionText }}</a>
-        </div>
-        @if (image) {
-          <div class="col-12 col-lg-4">
-            <div class="ratio ratio-4x3">
-              <img
-                appLazyImage
-                class="img-fluid object-fit-cover rounded-3"
-                [src]="image.imageUrl"
-                [imageAlt]="image.alt"
-                [imageLoading]="image.loading ?? 'lazy'"
-                [attr.title]="image.title"
-              />
-            </div>
-          </div>
-        }
-      </div>
-    </section>
-  `
+  templateUrl: './cta-banner.component.html',
+  styleUrl: './cta-banner.component.scss'
 })
 export class CtaBannerComponent {
   @Input() title = 'Start Your Next Landmark Project';

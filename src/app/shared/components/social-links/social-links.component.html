@@ -1,0 +1,15 @@
+<ul class="list-unstyled d-flex align-items-center gap-2 mb-0">
+  @for (link of links; track link.label) {
+    <li>
+      <a
+        class="btn btn-outline-light btn-sm rounded-circle social-btn"
+        [href]="link.url"
+        [attr.aria-label]="link.label"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <i [class]="link.icon"></i>
+      </a>
+    </li>
+  }
+</ul>

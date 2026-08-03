@@ -1,0 +1,20 @@
+.accordion-button {
+  &:not(.collapsed) {
+    background-color: #0b3c9a;
+    color: #ffffff;
+    box-shadow: none;
+
+    &::after {
+      filter: brightness(0) invert(1);
+    }
+  }
+
+  &:hover {
+    background-color: #f05a0a;
+    color: #ffffff;
+
+    &::after {
+      filter: brightness(0) invert(1);
+    }
+  }
+}

@@ -8,22 +8,8 @@ import { FaqAccordionComponent } from '../../shared/components/faq-accordion/faq
   selector: 'app-contact-page',
   standalone: true,
   imports: [PageLayoutComponent, ContactCardComponent, FaqAccordionComponent],
-  template: `
-    <app-page-layout
-      eyebrow="Contact"
-      title="Contact ML Builders"
-      subtitle="Base contact page sections are wired and ready for final business content."
-    >
-      <div class="row g-4">
-        <div class="col-12 col-lg-5">
-          <app-contact-card [image]="teamImage" />
-        </div>
-        <div class="col-12 col-lg-7">
-          <app-faq-accordion [items]="faqItems" />
-        </div>
-      </div>
-    </app-page-layout>
-  `
+  templateUrl: './contact.page.html',
+  styleUrl: './contact.page.scss'
 })
 export class ContactPageComponent {
   protected readonly teamImage = PLACEHOLDER_IMAGES.team;

@@ -7,34 +7,8 @@ import { LazyImageDirective } from '../../directives/lazy-image.directive';
   selector: 'app-contact-card',
   standalone: true,
   imports: [CommonModule, LazyImageDirective],
-  template: `
-    <article class="card h-100 border-0 shadow-sm">
-      @if (image) {
-        <div class="ratio ratio-16x9">
-          <img
-            appLazyImage
-            class="img-fluid object-fit-cover"
-            [src]="image.imageUrl"
-            [imageAlt]="image.alt"
-            [imageLoading]="image.loading ?? 'lazy'"
-            [attr.title]="image.title"
-          />
-        </div>
-      }
-      <div class="card-body">
-        <h3 class="h5 mb-3">{{ title }}</h3>
-        <p class="text-secondary mb-2">
-          <i class="bi bi-geo-alt-fill me-2"></i>{{ address }}
-        </p>
-        <p class="text-secondary mb-2">
-          <i class="bi bi-telephone-fill me-2"></i>{{ phone }}
-        </p>
-        <p class="text-secondary mb-0">
-          <i class="bi bi-envelope-fill me-2"></i>{{ email }}
-        </p>
-      </div>
-    </article>
-  `
+  templateUrl: './contact-card.component.html',
+  styleUrl: './contact-card.component.scss'
 })
 export class ContactCardComponent {
   @Input() title = 'ML Builders Office';

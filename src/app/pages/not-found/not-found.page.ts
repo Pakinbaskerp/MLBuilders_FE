@@ -5,19 +5,7 @@ import { RouterLink } from '@angular/router';
   selector: 'app-not-found-page',
   standalone: true,
   imports: [RouterLink],
-  template: `
-    <section class="py-5">
-      <div class="container">
-        <div class="row justify-content-center text-center">
-          <div class="col-12 col-lg-6">
-            <h1 class="display-4 fw-bold mb-3">404</h1>
-            <h2 class="h3 mb-3">Page Not Found</h2>
-            <p class="text-secondary mb-4">The page you are looking for does not exist in this base setup.</p>
-            <a routerLink="/" class="btn btn-ml-primary">Back to Home</a>
-          </div>
-        </div>
-      </div>
-    </section>
-  `
+  templateUrl: './not-found.page.html',
+  styleUrl: './not-found.page.scss'
 })
 export class NotFoundPageComponent {}

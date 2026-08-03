@@ -1,70 +1,77 @@
+// Primary — navy blue bg, white text; hover flips to orange
 .btn-ml-primary {
-  --bs-btn-color: #ffffff;
-  --bs-btn-bg: #0b3c9a;
-  --bs-btn-border-color: #0b3c9a;
-  --bs-btn-hover-color: #ffffff;
-  --bs-btn-hover-bg: #082d73;
-  --bs-btn-hover-border-color: #082d73;
-  --bs-btn-active-color: #ffffff;
-  --bs-btn-active-bg: #082d73;
-  --bs-btn-active-border-color: #082d73;
+  --bs-btn-color:               #ffffff;
+  --bs-btn-bg:                  #0b3c9a;
+  --bs-btn-border-color:        #0b3c9a;
+  --bs-btn-hover-color:         #ffffff;
+  --bs-btn-hover-bg:            #f05a0a;
+  --bs-btn-hover-border-color:  #f05a0a;
+  --bs-btn-active-color:        #ffffff;
+  --bs-btn-active-bg:           #f05a0a;
+  --bs-btn-active-border-color: #f05a0a;
 }
 
+// Secondary — orange bg, white text; hover flips to navy
 .btn-ml-secondary {
-  --bs-btn-color: #ffffff;
-  --bs-btn-bg: #1e63d6;
-  --bs-btn-border-color: #1e63d6;
-  --bs-btn-hover-color: #ffffff;
-  --bs-btn-hover-bg: #1851b0;
-  --bs-btn-hover-border-color: #1851b0;
-  --bs-btn-active-color: #ffffff;
-  --bs-btn-active-bg: #1851b0;
-  --bs-btn-active-border-color: #1851b0;
+  --bs-btn-color:               #ffffff;
+  --bs-btn-bg:                  #f05a0a;
+  --bs-btn-border-color:        #f05a0a;
+  --bs-btn-hover-color:         #ffffff;
+  --bs-btn-hover-bg:            #0b3c9a;
+  --bs-btn-hover-border-color:  #0b3c9a;
+  --bs-btn-active-color:        #ffffff;
+  --bs-btn-active-bg:           #0b3c9a;
+  --bs-btn-active-border-color: #0b3c9a;
 }
 
+// Outline — white bg with navy border/text; hover fills navy
 .btn-ml-outline {
-  --bs-btn-color: #0b3c9a;
-  --bs-btn-border-color: #0b3c9a;
-  --bs-btn-hover-color: #ffffff;
-  --bs-btn-hover-bg: #0b3c9a;
-  --bs-btn-hover-border-color: #0b3c9a;
-  --bs-btn-active-color: #ffffff;
-  --bs-btn-active-bg: #082d73;
-  --bs-btn-active-border-color: #082d73;
+  --bs-btn-color:               #0b3c9a;
+  --bs-btn-bg:                  #ffffff;
+  --bs-btn-border-color:        #0b3c9a;
+  --bs-btn-hover-color:         #ffffff;
+  --bs-btn-hover-bg:            #0b3c9a;
+  --bs-btn-hover-border-color:  #0b3c9a;
+  --bs-btn-active-color:        #ffffff;
+  --bs-btn-active-bg:           #f05a0a;
+  --bs-btn-active-border-color: #f05a0a;
 }
 
+// Orange — same as secondary (explicit alias)
 .btn-ml-orange {
-  --bs-btn-color: #ffffff;
-  --bs-btn-bg: #f05a0a;
-  --bs-btn-border-color: #f05a0a;
-  --bs-btn-hover-color: #ffffff;
-  --bs-btn-hover-bg: #d84d05;
-  --bs-btn-hover-border-color: #d84d05;
-  --bs-btn-active-color: #ffffff;
-  --bs-btn-active-bg: #d84d05;
-  --bs-btn-active-border-color: #d84d05;
+  --bs-btn-color:               #ffffff;
+  --bs-btn-bg:                  #f05a0a;
+  --bs-btn-border-color:        #f05a0a;
+  --bs-btn-hover-color:         #ffffff;
+  --bs-btn-hover-bg:            #0b3c9a;
+  --bs-btn-hover-border-color:  #0b3c9a;
+  --bs-btn-active-color:        #ffffff;
+  --bs-btn-active-bg:           #0b3c9a;
+  --bs-btn-active-border-color: #0b3c9a;
 }
 
+// Call — navy bg; hover flips to orange
 .btn-call {
-  --bs-btn-color: #ffffff;
-  --bs-btn-bg: #0b3c9a;
-  --bs-btn-border-color: #0b3c9a;
-  --bs-btn-hover-color: #ffffff;
-  --bs-btn-hover-bg: #082d73;
-  --bs-btn-hover-border-color: #082d73;
-  --bs-btn-active-color: #ffffff;
-  --bs-btn-active-bg: #082d73;
-  --bs-btn-active-border-color: #082d73;
+  --bs-btn-color:               #ffffff;
+  --bs-btn-bg:                  #0b3c9a;
+  --bs-btn-border-color:        #0b3c9a;
+  --bs-btn-hover-color:         #ffffff;
+  --bs-btn-hover-bg:            #f05a0a;
+  --bs-btn-hover-border-color:  #f05a0a;
+  --bs-btn-active-color:        #ffffff;
+  --bs-btn-active-bg:           #f05a0a;
+  --bs-btn-active-border-color: #f05a0a;
 }
 
+// WhatsApp — kept on brand green
 .btn-whatsapp {
-  --bs-btn-color: #ffffff;
-  --bs-btn-bg: #25d366;
-  --bs-btn-border-color: #25d366;
-  --bs-btn-hover-color: #ffffff;
-  --bs-btn-hover-bg: #1eaf54;
-  --bs-btn-hover-border-color: #1eaf54;
-  --bs-btn-active-color: #ffffff;
-  --bs-btn-active-bg: #1eaf54;
+  --bs-btn-color:               #ffffff;
+  --bs-btn-bg:                  #25d366;
+  --bs-btn-border-color:        #25d366;
+  --bs-btn-hover-color:         #ffffff;
+  --bs-btn-hover-bg:            #1eaf54;
+  --bs-btn-hover-border-color:  #1eaf54;
+  --bs-btn-active-color:        #ffffff;
+  --bs-btn-active-bg:           #1eaf54;
   --bs-btn-active-border-color: #1eaf54;
 }
