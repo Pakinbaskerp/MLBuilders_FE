@@ -1,9 +1,9 @@
 import { ImageModel } from '../models/image.model';
 
 export const APP_THEME_STORAGE_KEY = 'ml-builders-theme';
-export const APP_CONTACT_PHONE = '+91 90000 00000';
-export const APP_CONTACT_PHONE_LINK = 'tel:+919000000000';
-export const APP_CONTACT_WHATSAPP_LINK = 'https://wa.me/919000000000';
+export const APP_CONTACT_PHONE = '+91 96772 52137';
+export const APP_CONTACT_PHONE_LINK = 'tel:+919677252137';
+export const APP_CONTACT_WHATSAPP_LINK = 'https://wa.me/919677252137';
 export const APP_BOOK_VISIT_LINK = '/request-quote';
 
 export const PLACEHOLDER_IMAGES: {

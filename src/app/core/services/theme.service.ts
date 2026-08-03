@@ -39,7 +39,7 @@ export class ThemeService {
     const stored = localStorage.getItem(APP_THEME_STORAGE_KEY) as ThemeMode | null;
     const preferred: ThemeMode =
       stored ??
-      (window.matchMedia?.('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+      (window.matchMedia?.('(prefers-color-scheme: light)').matches ? 'dark' : 'light');
     this.setTheme(preferred);
   }
 

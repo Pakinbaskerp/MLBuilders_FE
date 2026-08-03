@@ -1,11 +1,37 @@
-.nav-link {
-  &:hover,
-  &:focus {
-    color: #f05a0a !important;
-  }
 
-  &.active {
-    color: #0b3c9a !important;
-    font-weight: 600;
+.navbar-nav {
+  .nav-link {
+    position: relative;
+    color: var(--bs-dark);
+    padding-bottom: 0.5rem;
+    transition: color 0.3s ease;
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 50%;
+      bottom: 0;
+      transform: translateX(-50%);
+      width: 0;
+      height: 3px;
+      background-color: #f05a0a;
+      border-radius: 2px;
+      transition: width 0.3s ease;
+    }
+
+    &:hover {
+      color: #f05a0a;
+      background-color: transparent;
+    }
+
+    &:hover::after,
+    &.active::after {
+      width: 100%;
+    }
+
+    &.active {
+      color: #0b3c9a;
+      font-weight: 600;
+    }
   }
 }
