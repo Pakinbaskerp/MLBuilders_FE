@@ -1,41 +1,105 @@
 <app-hero [image]="heroImage" />
+<section class="py-4">
+  <div class="container">
+
+    <div class="row justify-content-center g-3">
+
+      <div class="col-6 col-md-4 col-lg-3">
+        <app-statistics-card
+          value="25+"
+          label="Years of Experience">
+        </app-statistics-card>
+      </div>
+
+      <div class="col-6 col-md-4 col-lg-3">
+        <app-statistics-card
+          value="100+"
+          label="Happy Clients">
+        </app-statistics-card>
+      </div>
+
+      <div class="col-6 col-md-4 col-lg-3">
+        <app-statistics-card
+          value="150+"
+          label="Projects Completed">
+        </app-statistics-card>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<section class="py-5 services-section">
+  <div class="container">
+
+    <div class="text-center mb-5">
+      <span class="section-tag">Our Services</span>
+
+      <h2 class="section-title mt-3">
+        Quality Construction & Interior Solutions
+      </h2>
+
+      <p class="section-subtitle mx-auto">
+        We provide complete construction, renovation, interior design, and
+        project management services with a commitment to quality, innovation,
+        and customer satisfaction.
+      </p>
+    </div>
+
+    <div class="row justify-content-center g-4">
+
+      <div class="col-12 col-md-6 col-lg-4">
+        <app-service-card
+          [image]="serviceImage"
+          title="Construction">
+        </app-service-card>
+      </div>
+
+      <div class="col-12 col-md-6 col-lg-4">
+        <app-service-card
+          [image]="serviceImage"
+          title="Interior Design">
+        </app-service-card>
+      </div>
+
+      <div class="col-12 col-md-6 col-lg-4">
+        <app-service-card
+          [image]="serviceImage"
+          title="Renovation">
+        </app-service-card>
+      </div>
+
+    </div>
+
+  </div>
+</section>
 
 <section class="py-5">
   <div class="container">
-    <app-section-title
-      eyebrow="Base Setup"
-      title="Homepage Modules"
-      subtitle="Production-ready reusable sections are configured. Final content will be added in the next phase."
-    />
-    <div class="row g-4">
-      <div class="col-12 col-md-6 col-lg-4">
-        <app-service-card [image]="serviceImage" title="Service Card" />
-      </div>
-      <div class="col-12 col-md-6 col-lg-4">
-        <app-statistics-card value="25+" label="Years Experience" />
-      </div>
-      <div class="col-12 col-md-6 col-lg-4">
-        <app-statistics-card value="350+" label="Projects Delivered" />
-      </div>
+
+    <div class="text-center mb-5">
+      <h2 class="section-title">
+        Our Projects
+      </h2>
+
+      <p class="section-subtitle mx-auto">
+        Explore some of our recently completed residential and commercial projects.
+      </p>
     </div>
+
+    <app-bootstrap-carousel
+      [carouselId]="'homeShowcase'"
+      [slides]="carouselImages">
+    </app-bootstrap-carousel>
+
   </div>
 </section>
 
-<section class="pb-5">
+<section class="py-5">
   <div class="container">
-    <div class="row g-4 align-items-start">
-      <div class="col-12 col-lg-8">
-        <app-bootstrap-carousel [carouselId]="'homeShowcase'" [slides]="carouselImages" />
-      </div>
-      <div class="col-12 col-lg-4 d-flex justify-content-start justify-content-lg-end">
-        <app-bootstrap-dropdown label="Quick Navigation" [items]="quickLinks" />
-      </div>
-    </div>
+    <app-cta-banner [image]="projectImage"></app-cta-banner>
   </div>
 </section>
 
-<section class="pb-5">
-  <div class="container">
-    <app-cta-banner [image]="projectImage" />
-  </div>
-</section>
+

@@ -1,12 +1,114 @@
-// Hero component styles
-.btn-ml-outline-orange {
-  --bs-btn-color:               #f05a0a;
-  --bs-btn-bg:                  transparent;
-  --bs-btn-border-color:        #f05a0a;
-  --bs-btn-hover-color:         #ffffff;
-  --bs-btn-hover-bg:            #f05a0a;
-  --bs-btn-hover-border-color:  #f05a0a;
-  --bs-btn-active-color:        #ffffff;
-  --bs-btn-active-bg:           #0b3c9a;
-  --bs-btn-active-border-color: #0b3c9a;
+.hero-section {
+  position: relative;
+  min-height: calc(100vh - 72px);
+
+  display: flex;
+  align-items: center;
+
+  background-image: url("https://s6.imgcdn.dev/YXcCGB.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  overflow: hidden;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(8, 25, 47, 0.72);
+}
+
+.container {
+  position: relative;
+  z-index: 2;
+}
+
+.hero-tag {
+  display: inline-block;
+  background: rgba(255,255,255,.15);
+  color: #fff;
+  padding: 8px 18px;
+  border-radius: 30px;
+  font-size: .9rem;
+  margin-bottom: 20px;
+  backdrop-filter: blur(8px);
+}
+
+.hero-title {
+  font-size: clamp(3rem, 5vw, 5rem);
+  font-weight: 800;
+  line-height: 1.1;
+  margin-bottom: 24px;
+  color: #fff;
+}
+
+.hero-subtitle {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: rgba(255,255,255,.9);
+  max-width: 550px;
+}
+
+.hero-image {
+  width: 100%;
+  max-width: 600px;
+  animation: float 5s ease-in-out infinite;
+  border-radius: 5%;
+}
+
+@keyframes float {
+
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-12px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+
+}
+
+.btn-warning {
+  background: #f59e0b;
+  border: none;
+}
+
+.btn-warning:hover {
+  background: #d97706;
+}
+
+.btn-outline-light:hover {
+  color: #000;
+}
+
+@media (max-width: 991px) {
+
+  .hero-section {
+    padding: 80px 0;
+    text-align: center;
+  }
+
+  .hero-title {
+    font-size: 2.8rem;
+  }
+
+  .hero-subtitle {
+    margin: auto;
+  }
+
+  .hero-image {
+    margin-top: 40px;
+    max-width: 420px;
+    border-radius: 5%;
+  }
+
+  .d-flex {
+    justify-content: center;
+  }
+
 }
