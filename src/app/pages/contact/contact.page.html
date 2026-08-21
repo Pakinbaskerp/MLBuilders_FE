@@ -1,14 +1,85 @@
 <app-page-layout
   eyebrow="Contact"
   title="Contact ML Builders"
-  subtitle="Base contact page sections are wired and ready for final business content."
+  subtitle="Get in touch with us for construction, renovation, interior design, and project management services."
 >
   <div class="row g-4">
+
+    <!-- Contact Information -->
     <div class="col-12 col-lg-5">
-      <app-contact-card [image]="teamImage" />
+      <div class="card rounded-4 h-100">
+        <div class="card-body p-4">
+
+          <h3 class="fw-bold mb-4">Contact Information</h3>
+
+          <div class="d-flex align-items-start mb-4">
+            <i class="bi bi-telephone-fill fs-4 text-primary me-3"></i>
+            <div>
+              <h6 class="fw-semibold mb-1">Phone</h6>
+              <a href="tel:+919677252137" class="text-decoration-none text-dark">
+                +91 96772 52137
+              </a>
+            </div>
+          </div>
+
+          <div class="d-flex align-items-start mb-4">
+            <i class="bi bi-envelope-fill fs-4 text-primary me-3"></i>
+            <div>
+              <h6 class="fw-semibold mb-1">Email</h6>
+              <a href="mailto:janarthanam53@gmail.com" class="text-decoration-none text-dark">
+                janarthanam53@gmail.com
+              </a>
+            </div>
+          </div>
+
+          <div class="d-flex align-items-start mb-4">
+            <i class="bi bi-geo-alt-fill fs-4 text-primary me-3"></i>
+            <div>
+              <h6 class="fw-semibold mb-1">Office Address</h6>
+              <p class="mb-0 text-muted">
+                No.26, 14th Street,<br>
+                Kandasamy Nagar Annex,<br>
+                Vanagaram,<br>
+                Chennai - 600095
+              </p>
+            </div>
+          </div>
+
+          <div class="d-flex align-items-start">
+            <i class="bi bi-tools fs-4 text-primary me-3"></i>
+            <div>
+              <h6 class="fw-semibold mb-2">Our Services</h6>
+              <div class="d-flex flex-wrap gap-2">
+                <span class="badge text-bg-light border">Construction</span>
+                <span class="badge text-bg-light border">Renovation</span>
+                <span class="badge text-bg-light border">Interior</span>
+                <span class="badge text-bg-light border">Plan Approval</span>
+                <span class="badge text-bg-light border">Estimation</span>
+                <span class="badge text-bg-light border">Project Management</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
     </div>
+
+    <!-- Google Map -->
     <div class="col-12 col-lg-7">
-      <app-faq-accordion [items]="faqItems" />
+      <div class="card rounded-4 h-100">
+        <div class="card-body p-0">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d242.92251096903857!2d80.15840984879691!3d13.050931742097356!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a526100322da2c1%3A0xfac5483940ea7094!2sMahadevan.N%20house!5e0!3m2!1sen!2sus!4v1785955383163!5m2!1sen!2sus"
+            width="100%"
+            height="100%"
+            style="border:0; min-height:500px;"
+            loading="lazy"
+            allowfullscreen
+            referrerpolicy="strict-origin-when-cross-origin">
+          </iframe>
+        </div>
+      </div>
     </div>
+
   </div>
 </app-page-layout>

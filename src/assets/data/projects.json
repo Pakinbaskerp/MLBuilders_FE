@@ -1,0 +1,58 @@
+[
+  {
+    "imageUrl": "assets/images/projects/sample-project.jpg",
+    "alt": "Sample project photo",
+    "title": "Modern Villa",
+    "category": "Residential",
+    "location": "Chennai, Tamil Nadu"
+  },
+  {
+    "imageUrl": "assets/images/projects/sample-project.jpg",
+    "alt": "Sample project photo",
+    "title": "Interior Renovation",
+    "category": "Interior",
+    "location": "Coimbatore, Tamil Nadu"
+  },
+  {
+    "imageUrl": "assets/images/projects/sample-project.jpg",
+    "alt": "Sample project photo",
+    "title": "Commercial Complex",
+    "category": "Commercial",
+    "location": "Bangalore, Karnataka"
+  },
+  {
+    "imageUrl": "assets/images/projects/sample-project.jpg",
+    "alt": "Sample project photo",
+    "title": "Residential Apartment",
+    "category": "Residential",
+    "location": "Salem, Tamil Nadu"
+  },
+  {
+    "imageUrl": "assets/images/projects/sample-project.jpg",
+    "alt": "Sample project photo",
+    "title": "Home Renovation",
+    "category": "Renovation",
+    "location": "Madurai, Tamil Nadu"
+  },
+  {
+    "imageUrl": "assets/images/projects/sample-project.jpg",
+    "alt": "Sample project photo",
+    "title": "Farm House",
+    "category": "Residential",
+    "location": "Trichy, Tamil Nadu"
+  },
+  {
+    "imageUrl": "assets/images/projects/sample-project.jpg",
+    "alt": "Sample project photo",
+    "title": "Boutique Office",
+    "category": "Commercial",
+    "location": "Erode, Tamil Nadu"
+  },
+  {
+    "imageUrl": "assets/images/projects/sample-project.jpg",
+    "alt": "Sample project photo",
+    "title": "Lakeside Villa",
+    "category": "Residential",
+    "location": "Vellore, Tamil Nadu"
+  }
+]

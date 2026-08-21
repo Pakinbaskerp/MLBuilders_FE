@@ -1,7 +1,22 @@
 <app-page-layout
   eyebrow="Projects"
-  title="Project Portfolio"
-  subtitle="Base route and layout are configured for future project listings."
+  title=""
+  subtitle="Explore some of our recently completed residential and commercial projects."
 >
-  <div class="alert alert-light border mb-0">Project cards and filters will be added in the build-out phase.</div>
+  <div class="row g-3 g-lg-4">
+
+    @for (item of projects; track item.title) {
+
+    <div class="col-6 col-lg-3">
+      <app-project-card
+        [image]="item.image"
+        [title]="item.title"
+        [category]="item.category"
+        [location]="item.location">
+      </app-project-card>
+    </div>
+
+    }
+
+  </div>
 </app-page-layout>

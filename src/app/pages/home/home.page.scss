@@ -1,13 +1,17 @@
 .services-section {
-    background: #fff;
+    background: transparent;
+}
+
+.why-us-section {
+    background: transparent;
 }
 
 .section-tag {
     display: inline-block;
     padding: 8px 18px;
     border-radius: 30px;
-    background: #eef5ff;
-    color: #0d6efd;
+    background: var(--ml-bg-light);
+    color: var(--ml-primary);
     font-weight: 600;
     font-size: .9rem;
 }
@@ -15,12 +19,12 @@
 .section-title {
     font-size: clamp(2rem, 4vw, 3rem);
     font-weight: 700;
-    color: #1f2937;
+    color: var(--ml-text);
 }
 
 .section-subtitle {
     max-width: 700px;
-    color: #6b7280;
+    color: var(--ml-text-secondary);
     font-size: 1.1rem;
     line-height: 1.8;
 }
@@ -29,34 +33,27 @@
     display: block;
     height: 100%;
 }
-.services-section {
-    background: #fff;
+
+.feature-item {
+    padding: 12px;
 }
 
-.section-tag {
-    display: inline-block;
-    padding: 8px 18px;
-    border-radius: 30px;
-    background: #eef5ff;
-    color: #0d6efd;
-    font-weight: 600;
-    font-size: .9rem;
+.feature-icon {
+    width: 64px;
+    height: 64px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: var(--ml-white);
+    color: var(--ml-primary);
+    font-size: 1.6rem;
+    border: 1px solid rgba(11, 60, 154, .15);
+    box-shadow: 0 4px 12px rgba(11, 60, 154, .08);
 }
 
-.section-title {
-    font-size: clamp(2rem, 4vw, 3rem);
-    font-weight: 700;
-    color: #1f2937;
-}
-
-.section-subtitle {
-    max-width: 700px;
-    color: #6b7280;
-    font-size: 1.1rem;
-    line-height: 1.8;
-}
-
-.services-section app-service-card {
+.projects-section app-project-card {
     display: block;
     height: 100%;
 }

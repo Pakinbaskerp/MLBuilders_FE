@@ -1,4 +1,4 @@
-<article class="card border-0 shadow-sm h-100">
+<article class="card h-100">
   <div class="ratio ratio-16x9">
     <img
       appLazyImage
@@ -9,8 +9,34 @@
       [attr.title]="image.title"
     />
   </div>
-  <div class="card-body">
+  <div class="card-body d-flex flex-column">
+
+    @if (category || date) {
+    <div class="d-flex align-items-center gap-2 mb-2 small text-secondary">
+      @if (category) {
+      <span class="badge rounded-pill text-bg-light text-primary">{{ category }}</span>
+      }
+      @if (date) {
+      <span>{{ date }}</span>
+      }
+      @if (readTime) {
+      <span>&middot; {{ readTime }}</span>
+      }
+    </div>
+    }
+
     <h3 class="h5 card-title">{{ title }}</h3>
-    <p class="card-text text-secondary mb-0">{{ description }}</p>
+    <p class="card-text text-secondary flex-grow-1">{{ description }}</p>
+
+    <button
+      type="button"
+      class="btn btn-sm btn-ml-outline align-self-start"
+      [attr.data-bs-toggle]="modalTarget ? 'modal' : null"
+      [attr.data-bs-target]="modalTarget ? '#' + modalTarget : null"
+      [attr.aria-label]="'Read more about ' + title"
+      (click)="readMore.emit()">
+      Read More
+    </button>
+
   </div>
 </article>

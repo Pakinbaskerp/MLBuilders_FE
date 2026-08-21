@@ -16,7 +16,15 @@
 .hero-overlay {
   position: absolute;
   inset: 0;
-  background: rgba(8, 25, 47, 0.72);
+  background: linear-gradient(
+    100deg,
+    rgba(45, 48, 53, 0.75) 0%,
+    rgba(60, 63, 68, 0.55) 40%,
+    rgba(70, 73, 78, 0.3) 68%,
+    rgba(70, 73, 78, 0.08) 100%
+  );
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
 }
 
 .container {
@@ -26,13 +34,15 @@
 
 .hero-tag {
   display: inline-block;
-  background: rgba(255,255,255,.15);
+  background: rgba(255, 255, 255, .15);
+  border: 1px solid rgba(255, 255, 255, .3);
   color: #fff;
   padding: 8px 18px;
   border-radius: 30px;
   font-size: .9rem;
   margin-bottom: 20px;
   backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
 }
 
 .hero-title {
@@ -46,7 +56,7 @@
 .hero-subtitle {
   font-size: 1.2rem;
   line-height: 1.8;
-  color: rgba(255,255,255,.9);
+  color: rgba(255, 255, 255, .85);
   max-width: 550px;
 }
 
@@ -80,10 +90,6 @@
 
 .btn-warning:hover {
   background: #d97706;
-}
-
-.btn-outline-light:hover {
-  color: #000;
 }
 
 @media (max-width: 991px) {

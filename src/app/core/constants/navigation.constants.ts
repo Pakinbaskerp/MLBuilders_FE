@@ -5,7 +5,7 @@ export const HEADER_NAV_LINKS: NavigationLink[] = [
   { label: 'About', path: '/about' },
   { label: 'Services', path: '/services' },
   { label: 'Projects', path: '/projects' },
-  { label: 'Gallery', path: '/gallery' },
+  // { label: 'Gallery', path: '/gallery' },
   { label: 'Blog', path: '/blog' },
   { label: 'Contact', path: '/contact' }
 ];

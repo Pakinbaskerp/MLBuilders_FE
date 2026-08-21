@@ -3,8 +3,9 @@
   .nav-link {
     position: relative;
     color: var(--bs-dark);
-    padding-bottom: 0.5rem;
-    transition: color 0.3s ease;
+    padding: 0.5rem 1rem;
+    border-radius: 30px;
+    transition: color 0.3s ease, background-color 0.3s ease;
 
     &::after {
       content: "";
@@ -14,24 +15,24 @@
       transform: translateX(-50%);
       width: 0;
       height: 3px;
-      background-color: #f05a0a;
+      background-color: #0b3c9a;
       border-radius: 2px;
       transition: width 0.3s ease;
     }
 
     &:hover {
-      color: #f05a0a;
+      color: #0b3c9a;
       background-color: transparent;
     }
 
-    &:hover::after,
-    &.active::after {
+    &:hover::after {
       width: 100%;
     }
 
     &.active {
-      color: #0b3c9a;
+      color: #fff;
       font-weight: 600;
+      background-color: #0b3c9a;
     }
   }
 }

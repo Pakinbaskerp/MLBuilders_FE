@@ -1,1 +1,98 @@
-// CTA banner styles
+.cta-banner {
+  position: relative;
+  overflow: hidden;
+  border-radius: 2rem;
+  min-height: 450px;
+}
+
+/* Background Image */
+.bg-image {
+  position: absolute;
+  inset: 0;
+
+  background-image: url("https://s6.imgcdn.dev/YXnIeg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  transform: scale(1.05);
+  filter: blur(1px);
+
+  z-index: 0;
+}
+
+/* Grey glass overlay */
+.bg-overlay {
+  position: absolute;
+  inset: 0;
+
+  background: linear-gradient(
+    90deg,
+    rgba(45, 48, 53, 0.6) 0%,
+    rgba(60, 63, 68, 0.4) 35%,
+    rgba(60, 63, 68, 0.3) 60%,
+    rgba(45, 48, 53, 0.6) 100%
+  );
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+
+  z-index: 1;
+}
+
+/* Content */
+.container {
+  position: relative;
+  z-index: 2;
+}
+
+/* Trust badges + description */
+.cta-text {
+  color: rgba(255, 255, 255, .85);
+}
+
+/* Heading */
+.cta-title {
+  color: #fff;
+  font-weight: 800;
+}
+
+/* Primary Button */
+.btn-warning {
+  background: linear-gradient(135deg,#ff6a00,#ffb000);
+  border: none;
+  color: #111;
+  font-weight: 700;
+  transition: background .3s;
+}
+
+.btn-warning:hover {
+  background: linear-gradient(135deg,#e05f00,#e69d00);
+}
+
+/* Blue glow */
+.cta-banner::before {
+  content: "";
+  position: absolute;
+  width: 450px;
+  height: 450px;
+  top: -180px;
+  left: -120px;
+  border-radius: 50%;
+  background: rgba(13, 110, 253, .25);
+  filter: blur(80px);
+  z-index: 1;
+}
+
+/* Orange glow */
+.cta-banner::after {
+  content: "";
+  position: absolute;
+  width: 380px;
+  height: 380px;
+  bottom: -150px;
+  right: -100px;
+  border-radius: 50%;
+  background: rgba(255, 140, 0, .2);
+  filter: blur(70px);
+  z-index: 1;
+}

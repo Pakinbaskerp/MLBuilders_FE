@@ -1,7 +1,65 @@
 <app-page-layout
   eyebrow="Blog"
   title="Insights & Updates"
-  subtitle="Blog route is configured as part of the base architecture."
+  subtitle="Tips, guides, and updates from the ML Builders team."
 >
-  <div class="alert alert-light border mb-0">Blog cards and article detail pages will be added in a later sprint.</div>
+  <div class="row g-4">
+
+    @for (post of posts; track post.slug) {
+
+    <div class="col-12 col-md-6 col-lg-4">
+      <app-image-card
+        [image]="toImage(post)"
+        [title]="post.title"
+        [description]="post.description"
+        [category]="post.category"
+        [date]="post.date"
+        [readTime]="post.readTime"
+        modalTarget="blogPostModal"
+        (readMore)="selectPost(post)">
+      </app-image-card>
+    </div>
+
+    }
+
+  </div>
+
+  <div class="modal fade" id="blogPostModal" tabindex="-1" aria-labelledby="blogPostModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content">
+
+        <div class="modal-header">
+          <h2 class="modal-title fs-5" id="blogPostModalLabel">{{ selectedPost.title }}</h2>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+
+        <div class="modal-body">
+
+          <div class="ratio ratio-16x9 rounded-3 overflow-hidden mb-3">
+            <img
+              [src]="selectedPost.image.imageUrl"
+              [alt]="selectedPost.image.alt"
+              class="object-fit-cover"
+            />
+          </div>
+
+          <div class="d-flex align-items-center gap-2 mb-3 small text-secondary">
+            <span class="badge rounded-pill text-bg-light text-primary">{{ selectedPost.category }}</span>
+            <span>{{ selectedPost.date }}</span>
+            <span>&middot; {{ selectedPost.readTime }}</span>
+          </div>
+
+          @for (paragraph of selectedPost.content; track $index) {
+          <p class="text-secondary">{{ paragraph }}</p>
+          }
+
+        </div>
+
+        <div class="modal-footer">
+          <button type="button" class="btn btn-ml-outline" data-bs-dismiss="modal">Close</button>
+        </div>
+
+      </div>
+    </div>
+  </div>
 </app-page-layout>

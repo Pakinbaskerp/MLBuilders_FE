@@ -1,7 +1,22 @@
 <app-page-layout
   eyebrow="Services"
   title="Construction Services"
-  subtitle="Scalable services page shell prepared with Bootstrap-first structure."
+  subtitle="What we offer, from groundwork to finishing touches."
 >
-  <div class="alert alert-light border mb-0">Service categories and detailed cards will be integrated in the next step.</div>
+  <div class="row g-4">
+
+    @for (item of services; track item.title) {
+
+    <div class="col-12 col-md-6 col-lg-3">
+      <app-service-card
+        [image]="item.image"
+        [title]="item.title"
+        [description]="item.description"
+        [link]="item.link">
+      </app-service-card>
+    </div>
+
+    }
+
+  </div>
 </app-page-layout>

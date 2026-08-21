@@ -1,18 +1,52 @@
 import { CommonModule } from '@angular/common';
-import { Component, Input } from '@angular/core';
-import { ImageModel } from '../../../core/models/image.model';
-import { LazyImageDirective } from '../../directives/lazy-image.directive';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-testimonial-card',
   standalone: true,
-  imports: [CommonModule, LazyImageDirective],
+  imports: [CommonModule],
   templateUrl: './testimonial-card.component.html',
   styleUrl: './testimonial-card.component.scss'
 })
 export class TestimonialCardComponent {
-  @Input({ required: true }) image!: ImageModel;
-  @Input() quote = 'Client testimonial placeholder for future content.';
-  @Input() name = 'Client Name';
-  @Input() role = 'Home Owner';
+
+  testimonials = [
+    {
+      quote: 'ML Builders built our dream home with excellent quality and timely delivery.',
+      name: 'Janarthanam',
+      role: 'Home Owner',
+      location: 'Chennai'
+    },
+    {
+      quote: 'Professional team with transparent pricing. Highly recommended.',
+      name: 'Arun Kumar',
+      role: 'Business Owner',
+      location: 'Coimbatore'
+    },
+    {
+      quote: 'Our renovation was completed beyond expectations.',
+      name: 'Priya Sharma',
+      role: 'Interior Client',
+      location: 'Bangalore'
+    },
+    {
+      quote: 'Very satisfied with the construction quality.',
+      name: 'Vignesh',
+      role: 'Villa Owner',
+      location: 'Chennai'
+    },
+    {
+      quote: 'Excellent planning and project management.',
+      name: 'Ramesh',
+      role: 'Property Owner',
+      location: 'Salem'
+    },
+    {
+      quote: 'Best construction company I have worked with.',
+      name: 'Karthik',
+      role: 'Customer',
+      location: 'Madurai'
+    }
+  ];
+
 }

@@ -1,26 +1,31 @@
 <div class="position-fixed bottom-0 end-0 m-3 d-flex flex-column gap-2 floating-container">
   <a
-    class="btn btn-call rounded-circle shadow"
+    class="btn bg-white text-dark border-0 rounded-circle d-flex align-items-center justify-content-center"
     [href]="phoneLink"
     aria-label="Call ML Builders now"
+    style="width: 40px; height: 40px;"
   >
     <i class="bi bi-telephone-fill"></i>
   </a>
+
   <a
-    class="btn btn-whatsapp rounded-circle shadow"
+    class="btn bg-white text-dark border-0 rounded-circle d-flex align-items-center justify-content-center"
     [href]="whatsAppLink"
     target="_blank"
     rel="noopener noreferrer"
     aria-label="Chat with ML Builders on WhatsApp"
+    style="width: 40px; height: 40px;"
   >
     <i class="bi bi-whatsapp"></i>
   </a>
+
   @if (layoutService.isBackToTopVisible()) {
     <button
       type="button"
-      class="btn btn-ml-secondary rounded-circle shadow"
+      class="btn bg-white text-dark border-0 rounded-circle d-flex align-items-center justify-content-center"
       (click)="layoutService.scrollToTop()"
       aria-label="Scroll back to top"
+      style="width: 40px; height: 40px;"
     >
       <i class="bi bi-arrow-up"></i>
     </button>

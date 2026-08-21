@@ -1,1 +1,100 @@
-// Project card styles
+.project-tile {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  border-radius: 1rem;
+  cursor: pointer;
+  isolation: isolate;
+  border: 1px solid rgba(15, 23, 42, .08);
+  box-shadow: 0 4px 16px rgba(15, 23, 42, .06);
+}
+
+.project-tile__img {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform .5s ease;
+}
+
+.project-tile:hover .project-tile__img {
+  transform: scale(1.08);
+}
+
+.project-tile__overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: .75rem;
+
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, .8) 0%,
+    rgba(0, 0, 0, .35) 50%,
+    rgba(0, 0, 0, 0) 80%
+  );
+
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity .3s ease, transform .3s ease;
+
+  @media (min-width: 992px) {
+    padding: 1.25rem;
+  }
+}
+
+.project-tile:hover .project-tile__overlay {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.project-tile__category {
+  align-self: flex-start;
+  font-size: .65rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: .05em;
+  color: #fff;
+  background: rgba(255, 255, 255, .15);
+  border: 1px solid rgba(255, 255, 255, .4);
+  border-radius: 999px;
+  padding: .15rem .55rem;
+  margin-bottom: .35rem;
+  backdrop-filter: blur(2px);
+}
+
+.project-tile__title {
+  color: #fff;
+  font-weight: 700;
+  font-size: .9rem;
+  margin-bottom: .15rem;
+}
+
+.project-tile__location {
+  display: flex;
+  align-items: center;
+  color: rgba(255, 255, 255, .9);
+  font-size: .75rem;
+  margin-bottom: 0;
+}
+
+@media (min-width: 992px) {
+  .project-tile__category {
+    font-size: .7rem;
+    padding: .2rem .65rem;
+    margin-bottom: .5rem;
+  }
+
+  .project-tile__title {
+    font-size: 1.05rem;
+    margin-bottom: .2rem;
+  }
+
+  .project-tile__location {
+    font-size: .85rem;
+  }
+}

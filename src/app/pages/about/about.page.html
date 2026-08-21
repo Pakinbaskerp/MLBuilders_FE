@@ -1,7 +1,70 @@
 <app-page-layout
   eyebrow="About"
   title="About ML Builders"
-  subtitle="Base page scaffold is ready. Detailed content sections will be added later."
+  subtitle="Get to know the people and the story behind every project we build."
 >
-  <div class="alert alert-light border mb-0">About page modules are configured for the next implementation phase.</div>
+
+  <div class="row align-items-center g-5 mission-section">
+
+    <div class="col-lg-6">
+      <h2 class="section-heading mb-3">Our Mission</h2>
+      <p class="text-secondary">
+        There's a notion that to build fast, you have to cut corners. We believe the
+        opposite — that a construction company can grow with integrity, and win trust
+        by doing right by every client, every time. Our mission is to deliver homes
+        and workspaces that are built to last, priced honestly, and finished on time,
+        so families and businesses can move forward with confidence.
+      </p>
+    </div>
+
+    <div class="col-lg-6">
+      <div class="mission-blob mx-auto">
+        <img
+          appLazyImage
+          class="mission-blob__img"
+          [src]="missionImage.imageUrl"
+          [imageAlt]="missionImage.alt"
+          [imageLoading]="missionImage.loading ?? 'lazy'"
+        />
+      </div>
+    </div>
+
+  </div>
+
+  <div class="row align-items-center g-5 story-section my-4">
+
+    <div class="col-lg-6 order-lg-2">
+      <h2 class="section-heading mb-3">Our Story</h2>
+      <p class="text-secondary">
+        ML Builders began with a simple frustration: too many families were promised
+        dream homes and handed delays, hidden costs, and shortcuts instead. Our
+        founders, both from civil engineering backgrounds, set out to do it
+        differently — one project at a time, with a small crew that cared as much
+        about the finish as the foundation.
+      </p>
+      <p class="text-secondary mb-0">
+        Today, that same philosophy has grown into a full-service construction and
+        interior design company serving residential and commercial clients across
+        Tamil Nadu — but the core hasn't changed: transparent communication, skilled
+        hands, and a promise we keep.
+      </p>
+    </div>
+
+    <div class="col-lg-6 order-lg-1">
+      <div class="story-media">
+        <img
+          appLazyImage
+          class="story-media__img"
+          [src]="storyImage.imageUrl"
+          [imageAlt]="storyImage.alt"
+          [imageLoading]="storyImage.loading ?? 'lazy'"
+        />
+        <button type="button" class="story-media__play" aria-label="Play company story video">
+          <i class="bi bi-play-fill"></i>
+        </button>
+      </div>
+    </div>
+
+  </div>
+
 </app-page-layout>

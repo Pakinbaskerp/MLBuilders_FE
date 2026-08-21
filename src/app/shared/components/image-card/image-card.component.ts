@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { ImageModel } from '../../../core/models/image.model';
 import { LazyImageDirective } from '../../directives/lazy-image.directive';
 
@@ -14,4 +14,9 @@ export class ImageCardComponent {
   @Input({ required: true }) image!: ImageModel;
   @Input() title = 'Image Card';
   @Input() description = 'Base image card ready for content mapping.';
+  @Input() category = '';
+  @Input() date = '';
+  @Input() readTime = '';
+  @Input() modalTarget = '';
+  @Output() readMore = new EventEmitter<void>();
 }

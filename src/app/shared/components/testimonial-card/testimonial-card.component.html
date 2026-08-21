@@ -1,21 +1,180 @@
-<article class="card h-100 border-0 shadow-sm">
-  <div class="card-body">
-    <p class="text-secondary fst-italic">"{{ quote }}"</p>
-    <div class="d-flex align-items-center gap-3">
-      <img
-        appLazyImage
-        class="rounded-circle img-fluid"
-        [src]="image.imageUrl"
-        [imageAlt]="image.alt"
-        [imageLoading]="image.loading ?? 'lazy'"
-        [attr.title]="image.title"
-        width="56"
-        height="56"
-      />
-      <div>
-        <h3 class="h6 mb-0">{{ name }}</h3>
-        <small class="text-secondary">{{ role }}</small>
-      </div>
+<section class="py-5">
+
+    <div class="text-center mb-5">
+
+        <span class="badge rounded-pill border text-primary px-3 py-2">
+            TESTIMONIALS
+        </span>
+
+        <h2 class="display-5 fw-bold mt-3">
+            Trusted Across Tamil Nadu
+        </h2>
+
+        <p class="text-muted">
+            Hear from our happy customers.
+        </p>
+
     </div>
-  </div>
-</article>
+
+    <div id="testimonialCarousel"
+         class="carousel slide"
+         data-bs-ride="carousel">
+
+        <div class="carousel-inner">
+
+            <!-- First Slide -->
+            <div class="carousel-item active">
+
+                <div class="row g-4">
+
+                    @for(item of testimonials.slice(0,3); track item.name){
+
+                    <div class="col-lg-4">
+
+                        <div class="card rounded-4 h-100">
+
+                            <div class="card-body p-4">
+
+                                <div class="text-primary fs-5 mb-3">
+                                    ★★★★★
+                                </div>
+
+                                <p class="text-muted">
+                                    "{{item.quote}}"
+                                </p>
+
+                                <hr>
+
+                                <div class="d-flex align-items-center">
+
+                                    <div
+                                        class="rounded-circle bg-primary text-white fw-bold d-flex justify-content-center align-items-center"
+                                        style="width:60px;height:60px">
+
+                                        {{item.name.charAt(0)}}
+
+                                    </div>
+
+                                    <div class="ms-3">
+
+                                        <h6 class="mb-0">{{item.name}}</h6>
+
+                                        <small class="text-muted">
+
+                                            {{item.role}}
+
+                                        </small>
+
+                                        <br>
+
+                                        <small class="text-muted">
+
+                                            {{item.location}}
+
+                                        </small>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    }
+
+                </div>
+
+            </div>
+
+            <!-- Second Slide -->
+
+            <div class="carousel-item">
+
+                <div class="row g-4">
+
+                    @for(item of testimonials.slice(3,6); track item.name){
+
+                    <div class="col-lg-4">
+
+                        <div class="card rounded-4 h-100">
+
+                            <div class="card-body p-4">
+
+                                <div class="text-primary fs-5 mb-3">
+                                    ★★★★★
+                                </div>
+
+                                <p class="text-muted">
+                                    "{{item.quote}}"
+                                </p>
+
+                                <hr>
+
+                                <div class="d-flex align-items-center">
+
+                                    <div
+                                        class="rounded-circle bg-success text-white fw-bold d-flex justify-content-center align-items-center"
+                                        style="width:60px;height:60px">
+
+                                        {{item.name.charAt(0)}}
+
+                                    </div>
+
+                                    <div class="ms-3">
+
+                                        <h6 class="mb-0">{{item.name}}</h6>
+
+                                        <small class="text-muted">
+                                            {{item.role}}
+                                        </small>
+
+                                        <br>
+
+                                        <small class="text-muted">
+                                            {{item.location}}
+                                        </small>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    }
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#testimonialCarousel"
+            data-bs-slide="prev">
+
+            <span class="carousel-control-prev-icon"></span>
+
+        </button>
+
+        <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#testimonialCarousel"
+            data-bs-slide="next">
+
+            <span class="carousel-control-next-icon"></span>
+
+        </button>
+
+    </div>
+
+</section>

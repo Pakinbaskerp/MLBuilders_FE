@@ -31,16 +31,10 @@ export class ThemeService {
   }
 
   private initializeTheme(): void {
-    if (!isPlatformBrowser(this.platformId)) {
-      this.applyTheme('light');
-      return;
+    if (isPlatformBrowser(this.platformId)) {
+      localStorage.removeItem(APP_THEME_STORAGE_KEY);
     }
-
-    const stored = localStorage.getItem(APP_THEME_STORAGE_KEY) as ThemeMode | null;
-    const preferred: ThemeMode =
-      stored ??
-      (window.matchMedia?.('(prefers-color-scheme: light)').matches ? 'dark' : 'light');
-    this.setTheme(preferred);
+    this.setTheme('light');
   }
 
   private applyTheme(mode: ThemeMode): void {

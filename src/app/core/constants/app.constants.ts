@@ -6,6 +6,13 @@ export const APP_CONTACT_PHONE_LINK = 'tel:+919677252137';
 export const APP_CONTACT_WHATSAPP_LINK = 'https://wa.me/919677252137';
 export const APP_BOOK_VISIT_LINK = '/request-quote';
 
+export const SERVICE_DESCRIPTIONS: Record<string, string> = {
+  'Residential Construction': 'End-to-end home building with quality materials and on-time delivery.',
+  'Commercial Construction': 'Reliable construction of offices, retail, and commercial spaces.',
+  'Interior Fit-Outs': 'Functional and elegant interior design tailored to your space.',
+  'Renovation Works': 'Transforming existing spaces with modern upgrades and finishes.'
+};
+
 export const PLACEHOLDER_IMAGES: {
   hero: ImageModel;
   service: ImageModel;

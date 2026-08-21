@@ -1,3 +1,15 @@
 .floating-container {
   z-index: 1050;
 }
+.floating-container .btn:hover,
+.floating-container .btn:focus,
+.floating-container .btn:active {
+  background-color: #07ec66 !important; /* or your brand color */
+  color: #fff !important;
+}
+
+.floating-container .btn:hover i,
+.floating-container .btn:focus i,
+.floating-container .btn:active i {
+  color: #fff !important;
+}

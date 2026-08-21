@@ -1,4 +1,13 @@
-<app-hero [image]="heroImage" />
+<app-hero
+  [image]="heroImage"
+  tag="Premium Construction & Real Estate"
+  title="Building Excellence With Trust"
+  subtitle="From foundation to finishing touches, ML Builders delivers residential and commercial projects across Tamil Nadu — on time, on budget, and built to last."
+  primaryActionText="Request Free Quote"
+  secondaryActionText="View Our Projects"
+  primaryActionLink="/request-quote"
+  secondaryActionLink="/projects" />
+
 <section class="py-4">
   <div class="container">
 
@@ -25,6 +34,84 @@
         </app-statistics-card>
       </div>
 
+      <div class="col-6 col-md-4 col-lg-3">
+        <app-statistics-card
+          value="12+"
+          label="Cities Served">
+        </app-statistics-card>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<section class="py-5 why-us-section">
+  <div class="container">
+
+    <div class="text-center mb-5">
+      <span class="section-tag">Why Choose Us</span>
+
+      <h2 class="section-title mt-3">
+        Built On Trust, Delivered With Precision
+      </h2>
+
+      <p class="section-subtitle mx-auto">
+        Every project is backed by a team that treats your home or business
+        like our own — with honest pricing and hands-on craftsmanship.
+      </p>
+    </div>
+
+    <div class="row g-4">
+
+      <div class="col-6 col-lg-3">
+        <div class="feature-item text-center h-100">
+          <div class="feature-icon">
+            <i class="bi bi-patch-check-fill"></i>
+          </div>
+          <h3 class="h6 mt-3 mb-2">Licensed & Insured</h3>
+          <p class="text-secondary small mb-0">
+            Fully certified team following approved safety and quality standards.
+          </p>
+        </div>
+      </div>
+
+      <div class="col-6 col-lg-3">
+        <div class="feature-item text-center h-100">
+          <div class="feature-icon">
+            <i class="bi bi-cash-stack"></i>
+          </div>
+          <h3 class="h6 mt-3 mb-2">Transparent Pricing</h3>
+          <p class="text-secondary small mb-0">
+            Clear estimates with no hidden costs, from the first quote to handover.
+          </p>
+        </div>
+      </div>
+
+      <div class="col-6 col-lg-3">
+        <div class="feature-item text-center h-100">
+          <div class="feature-icon">
+            <i class="bi bi-clock-history"></i>
+          </div>
+          <h3 class="h6 mt-3 mb-2">On-Time Delivery</h3>
+          <p class="text-secondary small mb-0">
+            Planned timelines and steady progress updates until the final day.
+          </p>
+        </div>
+      </div>
+
+      <div class="col-6 col-lg-3">
+        <div class="feature-item text-center h-100">
+          <div class="feature-icon">
+            <i class="bi bi-tools"></i>
+          </div>
+          <h3 class="h6 mt-3 mb-2">Skilled In-House Team</h3>
+          <p class="text-secondary small mb-0">
+            Experienced engineers and craftsmen who own every detail on site.
+          </p>
+        </div>
+      </div>
+
     </div>
 
   </div>
@@ -49,37 +136,38 @@
 
     <div class="row justify-content-center g-4">
 
-      <div class="col-12 col-md-6 col-lg-4">
-        <app-service-card
-          [image]="serviceImage"
-          title="Construction">
-        </app-service-card>
-      </div>
+      @for (item of services; track item.title) {
 
       <div class="col-12 col-md-6 col-lg-4">
         <app-service-card
-          [image]="serviceImage"
-          title="Interior Design">
+          [image]="item.image"
+          [title]="item.title"
+          [description]="item.description"
+          [link]="item.link">
         </app-service-card>
       </div>
 
-      <div class="col-12 col-md-6 col-lg-4">
-        <app-service-card
-          [image]="serviceImage"
-          title="Renovation">
-        </app-service-card>
-      </div>
+      }
 
+    </div>
+
+    <div class="text-center mt-5">
+      <a routerLink="/services" class="btn btn-ml-outline px-4 py-2">
+        View All Services
+        <i class="bi bi-arrow-right ms-2"></i>
+      </a>
     </div>
 
   </div>
 </section>
 
-<section class="py-5">
+<section class="py-5 projects-section">
   <div class="container">
 
     <div class="text-center mb-5">
-      <h2 class="section-title">
+      <span class="section-tag">Featured Work</span>
+
+      <h2 class="section-title mt-3">
         Our Projects
       </h2>
 
@@ -88,18 +176,41 @@
       </p>
     </div>
 
-    <app-bootstrap-carousel
-      [carouselId]="'homeShowcase'"
-      [slides]="carouselImages">
-    </app-bootstrap-carousel>
+    <div class="row g-3 g-lg-4">
+
+      @for (item of featuredProjects; track item.title) {
+
+      <div class="col-6 col-lg-3">
+        <app-project-card
+          [image]="item.image"
+          [title]="item.title"
+          [category]="item.category"
+          [location]="item.location">
+        </app-project-card>
+      </div>
+
+      }
+
+    </div>
+
+    <div class="text-center mt-5">
+      <a routerLink="/projects" class="btn btn-ml-outline px-4 py-2">
+        View All Projects
+        <i class="bi bi-arrow-right ms-2"></i>
+      </a>
+    </div>
 
   </div>
 </section>
 
 <section class="py-5">
   <div class="container">
-    <app-cta-banner [image]="projectImage"></app-cta-banner>
+    <app-testimonial-card></app-testimonial-card>
   </div>
 </section>
 
-
+<section class="py-5">
+  <div class="container">
+    <app-cta-banner></app-cta-banner>
+  </div>
+</section>

@@ -1,1 +1,71 @@
 // About page styles
+.section-heading {
+  font-size: clamp(1.75rem, 3vw, 2.25rem);
+  font-weight: 700;
+  color: #1f2937;
+}
+
+/* Mission image blob */
+.mission-blob {
+  position: relative;
+  max-width: 420px;
+}
+
+.mission-blob::before {
+  content: "";
+  position: absolute;
+  top: -1.5rem;
+  right: -1.5rem;
+  width: 65%;
+  height: 55%;
+  background: #eef1f5;
+  border-radius: 60% 40% 55% 45% / 50% 55% 45% 50%;
+  z-index: 0;
+}
+
+.mission-blob__img {
+  position: relative;
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: 63% 37% 54% 46% / 46% 44% 56% 54%;
+  z-index: 1;
+}
+
+/* Story media with play button */
+.story-media {
+  position: relative;
+  border-radius: 1.25rem;
+  overflow: hidden;
+}
+
+.story-media__img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+.story-media__play {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 64px;
+  height: 64px;
+  border: none;
+  border-radius: 50%;
+  background: rgba(13, 110, 253, .92);
+  color: #fff;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform .25s ease, background-color .25s ease;
+}
+
+.story-media__play:hover {
+  background-color: #0d6efd;
+  transform: translate(-50%, -50%) scale(1.08);
+}
