@@ -36,6 +36,7 @@ interface ProjectEntry {
 })
 export class HomePageComponent {
   protected readonly heroImage = PLACEHOLDER_IMAGES.hero;
+  protected readonly heroSecondaryImage = PLACEHOLDER_IMAGES.heroSecondary;
 
   protected readonly services = FOOTER_SERVICE_LINKS.slice(0, 3).map((link) => ({
     title: link.label,

@@ -21,4 +21,5 @@ export class HeroComponent {
   @Input() primaryActionLink = '/request-quote';
   @Input() secondaryActionLink = '/projects';
   @Input({ required: true }) image!: ImageModel;
+  @Input() secondaryImage?: ImageModel;
 }

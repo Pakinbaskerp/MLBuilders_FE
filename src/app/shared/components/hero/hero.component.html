@@ -1,4 +1,4 @@
-<section class="hero-section">
+<section class="hero-section" [style.background-image]="'url(' + image.imageUrl + ')'">
 
   <div class="hero-overlay"></div>
 
@@ -37,10 +37,14 @@
 
       <div class="col-lg-6 text-center">
 
-        <img
-          class="hero-image"
-          src="https://s6.imgcdn.dev/YXcIeu.jpg"
-          alt="Construction Building">
+        <div class="hero-image-frame mx-auto">
+          <img
+            appLazyImage
+            class="hero-image"
+            [src]="(secondaryImage ?? image).imageUrl"
+            [imageAlt]="(secondaryImage ?? image).alt"
+            [imageLoading]="(secondaryImage ?? image).loading ?? 'eager'">
+        </div>
 
       </div>
 

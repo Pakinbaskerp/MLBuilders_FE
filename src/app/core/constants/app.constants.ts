@@ -15,17 +15,26 @@ export const SERVICE_DESCRIPTIONS: Record<string, string> = {
 
 export const PLACEHOLDER_IMAGES: {
   hero: ImageModel;
+  heroSecondary: ImageModel;
   service: ImageModel;
   project: ImageModel;
   gallery: ImageModel;
   team: ImageModel;
 } = {
   hero: {
-    imageUrl: 'assets/images/placeholders/hero.webp',
-    mobileImage: 'assets/images/placeholders/hero.webp',
-    tabletImage: 'assets/images/placeholders/hero.webp',
+    imageUrl: 'https://raw.githubusercontent.com/Pakinbaskerp/Image_cdn/main/MLBuilder_CDN/Images/home1.jpg',
+    mobileImage: 'https://raw.githubusercontent.com/Pakinbaskerp/Image_cdn/main/MLBuilder_CDN/Images/home1.jpg',
+    tabletImage: 'https://raw.githubusercontent.com/Pakinbaskerp/Image_cdn/main/MLBuilder_CDN/Images/home1.jpg',
     alt: 'ML Builders premium construction hero image',
     title: 'ML Builders Hero',
+    loading: 'eager'
+  },
+  heroSecondary: {
+    imageUrl: 'https://raw.githubusercontent.com/Pakinbaskerp/Image_cdn/main/MLBuilder_CDN/Images/home2.jpg',
+    mobileImage: 'https://raw.githubusercontent.com/Pakinbaskerp/Image_cdn/main/MLBuilder_CDN/Images/home2.jpg',
+    tabletImage: 'https://raw.githubusercontent.com/Pakinbaskerp/Image_cdn/main/MLBuilder_CDN/Images/home2.jpg',
+    alt: 'ML Builders construction showcase image',
+    title: 'ML Builders Hero Secondary',
     loading: 'eager'
   },
   service: {

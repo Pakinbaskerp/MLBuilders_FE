@@ -1,1 +1,40 @@
-// Footer component styles
+.ml-footer {
+  position: relative;
+  overflow: hidden;
+}
+
+.ml-footer-bg-image {
+  position: absolute;
+  inset: 0;
+
+  background-image: url("https://raw.githubusercontent.com/Pakinbaskerp/Image_cdn/main/MLBuilder_CDN/Images/footer.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  transform: scale(1.05);
+  filter: blur(3px);
+
+  z-index: 0;
+}
+
+.ml-footer-bg-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(20, 22, 26, 0.45);
+  z-index: 1;
+}
+
+.ml-footer h3,
+.ml-footer .footer-text,
+.ml-footer a {
+  text-shadow: 0 1px 10px rgba(0, 0, 0, .6);
+}
+
+.ml-footer .footer-text {
+  color: #fff !important;
+}
+
+.ml-footer a.footer-text:hover {
+  color: #fff !important;
+}

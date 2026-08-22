@@ -1,9 +1,12 @@
-<footer class="bg-primary text-white pt-5 pb-4 mt-auto">
-  <div class="container">
+<footer class="ml-footer text-white pt-5 pb-4 mt-auto">
+  <div class="ml-footer-bg-image"></div>
+  <div class="ml-footer-bg-overlay"></div>
+
+  <div class="container position-relative">
     <div class="row g-4">
       <div class="col-12 col-md-6 col-lg-3">
         <h3 class="h5">Company</h3>
-        <p class="text-white-50 mb-0">
+        <p class="footer-text mb-0">
           Premium construction and real estate solutions with scalable digital experience.
         </p>
       </div>
@@ -13,7 +16,7 @@
         <ul class="list-unstyled d-flex flex-column gap-2 mb-0">
           @for (link of quickLinks; track link.path) {
             <li>
-              <a class="text-white-50 text-decoration-none" [routerLink]="link.path">{{ link.label }}</a>
+              <a class="footer-text text-decoration-none" [routerLink]="link.path">{{ link.label }}</a>
             </li>
           }
         </ul>
@@ -24,7 +27,7 @@
         <ul class="list-unstyled d-flex flex-column gap-2 mb-0">
           @for (link of serviceLinks; track link.label) {
             <li>
-              <a class="text-white-50 text-decoration-none" [routerLink]="link.path">{{ link.label }}</a>
+              <a class="footer-text text-decoration-none" [routerLink]="link.path">{{ link.label }}</a>
             </li>
           }
         </ul>
@@ -32,13 +35,13 @@
 
       <div class="col-12 col-lg-4">
         <h3 class="h6">Connect</h3>
-        <p class="text-white-50 mb-3">Projects, Gallery, Blog, Contact and social channels.</p>
+        <p class="footer-text mb-3">Projects, Gallery, Blog, Contact and social channels.</p>
         <app-social-links />
       </div>
     </div>
     <hr class="border-light opacity-25 my-4" />
     <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-center gap-2">
-      <p class="mb-0 text-white-50">© {{ year }} O(n). All rights reserved.</p>
+      <p class="mb-0 footer-text">© {{ year }} O(n). All rights reserved.</p>
     </div>
   </div>
 </footer>
