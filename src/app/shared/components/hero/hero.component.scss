@@ -17,13 +17,13 @@
   inset: 0;
   background: linear-gradient(
     100deg,
-    rgba(45, 48, 53, 0.75) 0%,
-    rgba(60, 63, 68, 0.55) 40%,
-    rgba(70, 73, 78, 0.3) 68%,
-    rgba(70, 73, 78, 0.08) 100%
+    rgba(3, 48, 107, 0.6) 0%,
+    rgba(3, 48, 107, 0.4) 40%,
+    rgba(3, 48, 107, 0.18) 68%,
+    rgba(3, 48, 107, 0.04) 100%
   );
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
 }
 
 .container {
@@ -92,12 +92,12 @@
 }
 
 .btn-warning {
-  background: #f59e0b;
+  background: linear-gradient(135deg, #ff4c12, #cc8010);
   border: none;
 }
 
 .btn-warning:hover {
-  background: #d97706;
+  filter: brightness(1.08);
 }
 
 @media (max-width: 991px) {

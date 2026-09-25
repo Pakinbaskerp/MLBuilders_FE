@@ -1,4 +1,9 @@
 
+.navbar-brand-logo {
+  height: 60px;
+  width: auto;
+}
+
 .navbar-nav {
   .nav-link {
     position: relative;
@@ -15,13 +20,13 @@
       transform: translateX(-50%);
       width: 0;
       height: 3px;
-      background-color: #0b3c9a;
+      background-color: #03306b;
       border-radius: 2px;
       transition: width 0.3s ease;
     }
 
     &:hover {
-      color: #0b3c9a;
+      color: #03306b;
       background-color: transparent;
     }
 
@@ -32,7 +37,7 @@
     &.active {
       color: #fff;
       font-weight: 600;
-      background-color: #0b3c9a;
+      background-color: #03306b;
     }
   }
 }

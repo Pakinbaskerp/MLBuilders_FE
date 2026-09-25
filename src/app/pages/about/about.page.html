@@ -1,8 +1,4 @@
-<app-page-layout
-  eyebrow="About"
-  title="About ML Builders"
-  subtitle="Get to know the people and the story behind every project we build."
->
+<div class="container py-5">
 
   <div class="row align-items-center g-5 mission-section">
 
@@ -29,11 +25,27 @@
       </div>
     </div>
 
+    <div class="col-12">
+      <div class="row g-4 mt-2">
+        @for (pillar of missionPillars; track pillar.title) {
+          <div class="col-6 col-lg-3">
+            <div class="mission-pillar text-center h-100">
+              <div class="mission-pillar-icon">
+                <i class="bi" [class]="pillar.icon"></i>
+              </div>
+              <h3 class="h6 mt-3 mb-2">{{ pillar.title }}</h3>
+              <p class="text-secondary small mb-0">{{ pillar.description }}</p>
+            </div>
+          </div>
+        }
+      </div>
+    </div>
+
   </div>
 
-  <div class="row align-items-center g-5 story-section my-4">
+  <div class="row story-section my-4">
 
-    <div class="col-lg-6 order-lg-2">
+    <div class="col-lg-9">
       <h2 class="section-heading mb-3">Our Story</h2>
       <p class="text-secondary">
         ML Builders began with a simple frustration: too many families were promised
@@ -50,21 +62,6 @@
       </p>
     </div>
 
-    <div class="col-lg-6 order-lg-1">
-      <div class="story-media">
-        <img
-          appLazyImage
-          class="story-media__img"
-          [src]="storyImage.imageUrl"
-          [imageAlt]="storyImage.alt"
-          [imageLoading]="storyImage.loading ?? 'lazy'"
-        />
-        <button type="button" class="story-media__play" aria-label="Play company story video">
-          <i class="bi bi-play-fill"></i>
-        </button>
-      </div>
-    </div>
-
   </div>
 
-</app-page-layout>
+</div>

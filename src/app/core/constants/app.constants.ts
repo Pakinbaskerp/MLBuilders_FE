@@ -1,9 +1,20 @@
 import { ImageModel } from '../models/image.model';
+import imagePaths from '../../../assets/data/image-paths.json';
+
+export const IMAGE_PATHS = imagePaths;
 
 export const APP_THEME_STORAGE_KEY = 'ml-builders-theme';
 export const APP_CONTACT_PHONE = '+91 96772 52137';
 export const APP_CONTACT_PHONE_LINK = 'tel:+919677252137';
+export const APP_CONTACT_PHONE_SECONDARY = '+91 99410 33011';
+export const APP_CONTACT_PHONE_SECONDARY_LINK = 'tel:+919941033011';
 export const APP_CONTACT_WHATSAPP_LINK = 'https://wa.me/919677252137';
+export const APP_CONTACT_EMAIL = 'contact@mlbuilders.in';
+export const APP_CONTACT_EMAIL_LINK = 'mailto:contact@mlbuilders.in';
+export const APP_CONTACT_WEBSITE = 'www.mlbuilders.in';
+export const APP_CONTACT_WEBSITE_LINK = 'https://www.mlbuilders.in';
+export const APP_CONTACT_INSTAGRAM = '@ml._.builders';
+export const APP_CONTACT_INSTAGRAM_LINK = 'https://instagram.com/ml._.builders';
 export const APP_BOOK_VISIT_LINK = '/request-quote';
 
 export const SERVICE_DESCRIPTIONS: Record<string, string> = {
@@ -22,51 +33,57 @@ export const PLACEHOLDER_IMAGES: {
   team: ImageModel;
 } = {
   hero: {
-    imageUrl: 'https://raw.githubusercontent.com/Pakinbaskerp/Image_cdn/main/MLBuilder_CDN/Images/home1.jpg',
-    mobileImage: 'https://raw.githubusercontent.com/Pakinbaskerp/Image_cdn/main/MLBuilder_CDN/Images/home1.jpg',
-    tabletImage: 'https://raw.githubusercontent.com/Pakinbaskerp/Image_cdn/main/MLBuilder_CDN/Images/home1.jpg',
+    ...imagePaths.hero,
     alt: 'ML Builders premium construction hero image',
     title: 'ML Builders Hero',
     loading: 'eager'
   },
   heroSecondary: {
-    imageUrl: 'https://raw.githubusercontent.com/Pakinbaskerp/Image_cdn/main/MLBuilder_CDN/Images/home2.jpg',
-    mobileImage: 'https://raw.githubusercontent.com/Pakinbaskerp/Image_cdn/main/MLBuilder_CDN/Images/home2.jpg',
-    tabletImage: 'https://raw.githubusercontent.com/Pakinbaskerp/Image_cdn/main/MLBuilder_CDN/Images/home2.jpg',
+    ...imagePaths.heroSecondary,
     alt: 'ML Builders construction showcase image',
     title: 'ML Builders Hero Secondary',
     loading: 'eager'
   },
   service: {
-    imageUrl: 'assets/images/placeholders/service.webp',
-    mobileImage: 'assets/images/placeholders/service.webp',
-    tabletImage: 'assets/images/placeholders/service.webp',
+    ...imagePaths.placeholders.service,
     alt: 'Construction service placeholder image',
     title: 'Construction Services',
     loading: 'lazy'
   },
   project: {
-    imageUrl: 'assets/images/placeholders/project.webp',
-    mobileImage: 'assets/images/placeholders/project.webp',
-    tabletImage: 'assets/images/placeholders/project.webp',
+    ...imagePaths.placeholders.project,
     alt: 'Real estate project placeholder image',
     title: 'Project Showcase',
     loading: 'lazy'
   },
   gallery: {
-    imageUrl: 'assets/images/placeholders/gallery.webp',
-    mobileImage: 'assets/images/placeholders/gallery.webp',
-    tabletImage: 'assets/images/placeholders/gallery.webp',
+    ...imagePaths.placeholders.gallery,
     alt: 'Gallery placeholder image',
     title: 'Gallery Preview',
     loading: 'lazy'
   },
   team: {
-    imageUrl: 'assets/images/placeholders/team.webp',
-    mobileImage: 'assets/images/placeholders/team.webp',
-    tabletImage: 'assets/images/placeholders/team.webp',
+    ...imagePaths.placeholders.team,
     alt: 'Team placeholder image',
     title: 'Team Preview',
     loading: 'lazy'
   }
 };
+
+export const ABOUT_IMAGES: {
+  mission: ImageModel;
+} = {
+  mission: {
+    ...imagePaths.about.mission,
+    alt: 'ML Builders mission illustrative image',
+    title: 'Our Mission',
+    loading: 'lazy'
+  }
+};
+
+export const SERVICE_IMAGES: Record<string, ImageModel> = Object.fromEntries(
+  Object.entries(imagePaths.services).map(([label, image]) => [
+    label,
+    { ...image, alt: `${label} service image`, loading: 'lazy' } satisfies ImageModel
+  ])
+);

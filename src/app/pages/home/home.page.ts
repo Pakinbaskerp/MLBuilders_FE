@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
-import { PLACEHOLDER_IMAGES, SERVICE_DESCRIPTIONS } from '../../core/constants/app.constants';
+import { PLACEHOLDER_IMAGES, SERVICE_DESCRIPTIONS, SERVICE_IMAGES } from '../../core/constants/app.constants';
 import { FOOTER_SERVICE_LINKS } from '../../core/constants/navigation.constants';
 import { ImageModel } from '../../core/models/image.model';
 import { CtaBannerComponent } from '../../shared/components/cta-banner/cta-banner.component';
@@ -42,7 +42,7 @@ export class HomePageComponent {
     title: link.label,
     link: link.path,
     description: SERVICE_DESCRIPTIONS[link.label] ?? '',
-    image: PLACEHOLDER_IMAGES.service
+    image: SERVICE_IMAGES[link.label] ?? PLACEHOLDER_IMAGES.service
   }));
 
   protected readonly featuredProjects = (projectsData as ProjectEntry[]).slice(0, 4).map((item) => ({

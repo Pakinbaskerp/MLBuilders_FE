@@ -1,1 +1,45 @@
 // Contact page styles
+.contact-page {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.contact-page-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, .6);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.contact-content {
+  padding-top: 3rem;
+}
+
+.contact-card {
+  box-shadow: 0 24px 60px rgba(15, 23, 42, .18);
+}
+
+.contact-panel-info {
+  background: var(--ml-bg-light);
+}
+
+.contact-panel-form {
+  background: #ffffff;
+}
+
+.contact-icon-badge {
+  flex: none;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #03306b, #0b4a9e);
+  color: #fff;
+  font-size: 1.1rem;
+}

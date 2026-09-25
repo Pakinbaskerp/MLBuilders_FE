@@ -4,12 +4,12 @@ import {
   FOOTER_QUICK_LINKS,
   FOOTER_SERVICE_LINKS
 } from '../../core/constants/navigation.constants';
-import { SocialLinksComponent } from '../../shared/components/social-links/social-links.component';
+import { IMAGE_PATHS } from '../../core/constants/app.constants';
 
 @Component({
   selector: 'app-footer',
   standalone: true,
-  imports: [RouterLink, SocialLinksComponent],
+  imports: [RouterLink],
   templateUrl: './footer.component.html',
   styleUrl: './footer.component.scss'
 })
@@ -17,4 +17,5 @@ export class FooterComponent {
   protected readonly quickLinks = FOOTER_QUICK_LINKS;
   protected readonly serviceLinks = FOOTER_SERVICE_LINKS;
   protected readonly year = new Date().getFullYear();
+  protected readonly backgroundImage = IMAGE_PATHS.layout.footerBackground;
 }

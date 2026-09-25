@@ -10,7 +10,6 @@
   position: absolute;
   inset: 0;
 
-  background-image: url("https://raw.githubusercontent.com/Pakinbaskerp/Image_cdn/main/MLBuilder_CDN/Images/ctc.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -58,7 +57,7 @@
 
 /* Primary Button */
 .btn-warning {
-  background: linear-gradient(135deg,#ff6a00,#ffb000);
+  background: linear-gradient(135deg,#ff4c12,#cc8010);
   border: none;
   color: #111;
   font-weight: 700;
@@ -66,7 +65,7 @@
 }
 
 .btn-warning:hover {
-  background: linear-gradient(135deg,#e05f00,#e69d00);
+  background: linear-gradient(135deg,#cc3d0e,#a8690d);
 }
 
 /* Blue glow */

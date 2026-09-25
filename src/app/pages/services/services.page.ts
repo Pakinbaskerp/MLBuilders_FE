@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { PLACEHOLDER_IMAGES, SERVICE_DESCRIPTIONS } from '../../core/constants/app.constants';
+import { PLACEHOLDER_IMAGES, SERVICE_DESCRIPTIONS, SERVICE_IMAGES } from '../../core/constants/app.constants';
 import { FOOTER_SERVICE_LINKS } from '../../core/constants/navigation.constants';
 import { PageLayoutComponent } from '../../layouts/page-layout/page-layout.component';
 import { ServiceCardComponent } from '../../shared/components/service-card/service-card.component';
@@ -16,6 +16,6 @@ export class ServicesPageComponent {
     title: link.label,
     link: link.path,
     description: SERVICE_DESCRIPTIONS[link.label] ?? '',
-    image: PLACEHOLDER_IMAGES.service
+    image: SERVICE_IMAGES[link.label] ?? PLACEHOLDER_IMAGES.service
   }));
 }

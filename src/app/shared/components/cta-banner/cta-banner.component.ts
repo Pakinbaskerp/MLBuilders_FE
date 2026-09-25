@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component, Input } from '@angular/core';
 import { RouterLink } from '@angular/router';
+import { IMAGE_PATHS } from '../../../core/constants/app.constants';
 
 @Component({
   selector: 'app-cta-banner',
@@ -10,6 +11,8 @@ import { RouterLink } from '@angular/router';
   styleUrl: './cta-banner.component.scss'
 })
 export class CtaBannerComponent {
+
+  protected readonly backgroundImage = IMAGE_PATHS.components.ctaBannerBackground;
 
   @Input() title = 'Ready to Build Your Dream Home?';
 

@@ -1,6 +1,6 @@
 .accordion-button {
   &:not(.collapsed) {
-    background-color: #0b3c9a;
+    background-color: #03306b;
     color: #ffffff;
     box-shadow: none;
 
@@ -10,7 +10,7 @@
   }
 
   &:hover {
-    background-color: #f05a0a;
+    background-color: #ff4c12;
     color: #ffffff;
 
     &::after {

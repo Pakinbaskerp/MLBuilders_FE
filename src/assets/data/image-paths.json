@@ -1,0 +1,70 @@
+{
+  "hero": {
+    "imageUrl": "https://raw.githubusercontent.com/Pakinbaskerp/Image_cdn/main/MLBuilder_CDN/Images/home1.jpg",
+    "mobileImage": "https://raw.githubusercontent.com/Pakinbaskerp/Image_cdn/main/MLBuilder_CDN/Images/home1.jpg",
+    "tabletImage": "https://raw.githubusercontent.com/Pakinbaskerp/Image_cdn/main/MLBuilder_CDN/Images/home1.jpg"
+  },
+  "heroSecondary": {
+    "imageUrl": "https://raw.githubusercontent.com/Pakinbaskerp/Image_cdn/main/MLBuilder_CDN/Images/hero_2.png",
+    "mobileImage": "https://raw.githubusercontent.com/Pakinbaskerp/Image_cdn/main/MLBuilder_CDN/Images/hero_2.png",
+    "tabletImage": "https://raw.githubusercontent.com/Pakinbaskerp/Image_cdn/main/MLBuilder_CDN/Images/hero_2.png"
+  },
+  "placeholders": {
+    "service": {
+      "imageUrl": "assets/images/placeholders/service.webp",
+      "mobileImage": "assets/images/placeholders/service.webp",
+      "tabletImage": "assets/images/placeholders/service.webp"
+    },
+    "project": {
+      "imageUrl": "assets/images/placeholders/project.webp",
+      "mobileImage": "assets/images/placeholders/project.webp",
+      "tabletImage": "assets/images/placeholders/project.webp"
+    },
+    "gallery": {
+      "imageUrl": "assets/images/placeholders/gallery.webp",
+      "mobileImage": "assets/images/placeholders/gallery.webp",
+      "tabletImage": "assets/images/placeholders/gallery.webp"
+    },
+    "team": {
+      "imageUrl": "assets/images/placeholders/team.webp",
+      "mobileImage": "assets/images/placeholders/team.webp",
+      "tabletImage": "assets/images/placeholders/team.webp"
+    }
+  },
+  "about": {
+    "mission": {
+      "imageUrl": "https://raw.githubusercontent.com/Pakinbaskerp/Image_cdn/main/MLBuilder_CDN/Images/owner.jpeg",
+      "mobileImage": "https://raw.githubusercontent.com/Pakinbaskerp/Image_cdn/main/MLBuilder_CDN/Images/owner.jpeg",
+      "tabletImage": "https://raw.githubusercontent.com/Pakinbaskerp/Image_cdn/main/MLBuilder_CDN/Images/owner.jpeg"
+    }
+  },
+  "services": {
+    "Residential Construction": {
+      "imageUrl": "assets/images/placeholders/service.webp",
+      "mobileImage": "assets/images/placeholders/service.webp",
+      "tabletImage": "assets/images/placeholders/service.webp"
+    },
+    "Commercial Construction": {
+      "imageUrl": "assets/images/placeholders/service.webp",
+      "mobileImage": "assets/images/placeholders/service.webp",
+      "tabletImage": "assets/images/placeholders/service.webp"
+    },
+    "Interior Fit-Outs": {
+      "imageUrl": "assets/images/placeholders/service.webp",
+      "mobileImage": "assets/images/placeholders/service.webp",
+      "tabletImage": "assets/images/placeholders/service.webp"
+    },
+    "Renovation Works": {
+      "imageUrl": "assets/images/placeholders/service.webp",
+      "mobileImage": "assets/images/placeholders/service.webp",
+      "tabletImage": "assets/images/placeholders/service.webp"
+    }
+  },
+  "layout": {
+    "favicon": "favicon.jpeg",
+    "footerBackground": "https://raw.githubusercontent.com/Pakinbaskerp/Image_cdn/main/MLBuilder_CDN/Images/footer.jpg"
+  },
+  "components": {
+    "ctaBannerBackground": "https://raw.githubusercontent.com/Pakinbaskerp/Image_cdn/main/MLBuilder_CDN/Images/ctc.jpg"
+  }
+}
