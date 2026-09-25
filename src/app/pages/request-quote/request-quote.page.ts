@@ -1,6 +1,7 @@
 import { Component, inject } from '@angular/core';
 import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
 import { APP_CONTACT_WHATSAPP_LINK } from '../../core/constants/app.constants';
+import { SeoService } from '../../core/services/seo.service';
 import { PageLayoutComponent } from '../../layouts/page-layout/page-layout.component';
 
 @Component({
@@ -12,6 +13,19 @@ import { PageLayoutComponent } from '../../layouts/page-layout/page-layout.compo
 })
 export class RequestQuotePageComponent {
   private readonly fb = inject(FormBuilder);
+  private readonly seo = inject(SeoService);
+
+  constructor() {
+    this.seo.update(
+      {
+        title: 'Request a Quote',
+        description:
+          'Request a free construction or renovation quote from ML Builders, serving Chennai, Kancheepuram, and Tamil Nadu.',
+        keywords: 'free construction quote Chennai, request quote ML Builders'
+      },
+      '/request-quote'
+    );
+  }
 
   protected readonly quoteForm = this.fb.nonNullable.group({
     name: ['', [Validators.required, Validators.minLength(2)]],

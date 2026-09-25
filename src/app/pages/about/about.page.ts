@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { ABOUT_IMAGES } from '../../core/constants/app.constants';
+import { SeoService } from '../../core/services/seo.service';
 import { LazyImageDirective } from '../../shared/directives/lazy-image.directive';
 
 @Component({
@@ -10,6 +11,20 @@ import { LazyImageDirective } from '../../shared/directives/lazy-image.directive
   styleUrl: './about.page.scss'
 })
 export class AboutPageComponent {
+  private readonly seo = inject(SeoService);
+
+  constructor() {
+    this.seo.update(
+      {
+        title: 'About Us',
+        description:
+          'Meet the team behind ML Builders — a construction company built on integrity, honest pricing, and on-time delivery for clients across Chennai and Kancheepuram.',
+        keywords: 'about ML Builders, construction company Chennai, builders Kancheepuram'
+      },
+      '/about'
+    );
+  }
+
   protected readonly missionImage = ABOUT_IMAGES.mission;
 
   protected readonly missionPillars = [

@@ -14,6 +14,7 @@ import {
   APP_CONTACT_WHATSAPP_LINK,
   PLACEHOLDER_IMAGES
 } from '../../core/constants/app.constants';
+import { SeoService } from '../../core/services/seo.service';
 
 @Component({
   selector: 'app-contact-page',
@@ -24,6 +25,19 @@ import {
 })
 export class ContactPageComponent {
   private readonly fb = inject(FormBuilder);
+  private readonly seo = inject(SeoService);
+
+  constructor() {
+    this.seo.update(
+      {
+        title: 'Contact Us',
+        description:
+          'Get in touch with ML Builders for construction, renovation, and interior design services in Chennai, Kancheepuram, and across Tamil Nadu.',
+        keywords: 'contact ML Builders, builders Chennai phone number, construction quote Tamil Nadu'
+      },
+      '/contact'
+    );
+  }
 
   protected readonly heroBackground = PLACEHOLDER_IMAGES.hero.imageUrl;
   protected readonly contactPhone = APP_CONTACT_PHONE;

@@ -1,8 +1,9 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { PLACEHOLDER_IMAGES, SERVICE_DESCRIPTIONS, SERVICE_IMAGES } from '../../core/constants/app.constants';
 import { FOOTER_SERVICE_LINKS } from '../../core/constants/navigation.constants';
 import { ImageModel } from '../../core/models/image.model';
+import { SeoService } from '../../core/services/seo.service';
 import { CtaBannerComponent } from '../../shared/components/cta-banner/cta-banner.component';
 import { HeroComponent } from '../../shared/components/hero/hero.component';
 import { ProjectCardComponent } from '../../shared/components/project-card/project-card.component';
@@ -35,6 +36,21 @@ interface ProjectEntry {
   styleUrl: './home.page.scss'
 })
 export class HomePageComponent {
+  private readonly seo = inject(SeoService);
+
+  constructor() {
+    this.seo.update(
+      {
+        title: 'Construction Company in Chennai & Kancheepuram',
+        description:
+          'ML Builders delivers residential and commercial construction, renovation, and interior design across Chennai, Kancheepuram, and Tamil Nadu — on time, on budget, and built to last.',
+        keywords:
+          'builders in Chennai, builders in Kancheepuram, construction company Tamil Nadu, ML Builders, home construction, residential construction, commercial construction'
+      },
+      '/'
+    );
+  }
+
   protected readonly heroImage = PLACEHOLDER_IMAGES.hero;
   protected readonly heroSecondaryImage = PLACEHOLDER_IMAGES.heroSecondary;
 
