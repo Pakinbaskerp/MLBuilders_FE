@@ -1,19 +1,74 @@
+.stats-section {
+    position: relative;
+    background: var(--ml-gradient-navy);
+    overflow: hidden;
+}
+
+.stats-section::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at 15% 20%, rgba(204, 128, 16, .18), transparent 45%),
+                radial-gradient(circle at 85% 80%, rgba(255, 76, 18, .16), transparent 45%);
+}
+
+.stats-section .row {
+    position: relative;
+    z-index: 1;
+}
+
+.stats-section app-statistics-card .card {
+    background: rgba(255, 255, 255, .08);
+    border: 1px solid rgba(255, 255, 255, .15) !important;
+    box-shadow: none !important;
+}
+
+.stats-section app-statistics-card .text-warning {
+    color: #f0b354 !important;
+}
+
+.stats-section app-statistics-card .text-muted {
+    color: rgba(255, 255, 255, .75) !important;
+}
+
+.why-us-section {
+    background: var(--ml-bg-light);
+}
+
 .services-section {
     background: transparent;
 }
 
-.why-us-section {
-    background: transparent;
+.projects-section {
+    background: var(--ml-bg-light);
+}
+
+.testimonials-section {
+    position: relative;
+    background: linear-gradient(180deg, #fff5eb 0%, #fdeee0 100%);
+    overflow: hidden;
+}
+
+.testimonials-section::before {
+    content: "";
+    position: absolute;
+    top: -80px;
+    right: -80px;
+    width: 260px;
+    height: 260px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(255, 76, 18, .1), transparent 70%);
 }
 
 .section-tag {
     display: inline-block;
     padding: 8px 18px;
     border-radius: 30px;
-    background: var(--ml-bg-light);
+    background: var(--ml-white);
     color: var(--ml-primary);
     font-weight: 600;
     font-size: .9rem;
+    box-shadow: 0 2px 8px rgba(3, 48, 107, .1);
 }
 
 .section-title {

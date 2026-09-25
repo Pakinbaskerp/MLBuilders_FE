@@ -1,58 +1,86 @@
 [
   {
-    "imageUrl": "assets/images/projects/sample-project.jpg",
-    "alt": "Sample project photo",
-    "title": "Modern Villa",
+    "imageUrl": "https://raw.githubusercontent.com/Pakinbaskerp/Image_cdn/main/MLBuilder_CDN/Images/Project1.jpg",
+    "alt": "Independent house built by ML Builders in Chennai",
+    "title": "Independent House",
     "category": "Residential",
     "location": "Chennai, Tamil Nadu"
   },
   {
-    "imageUrl": "assets/images/projects/sample-project.jpg",
-    "alt": "Sample project photo",
-    "title": "Interior Renovation",
-    "category": "Interior",
-    "location": "Coimbatore, Tamil Nadu"
-  },
-  {
-    "imageUrl": "assets/images/projects/sample-project.jpg",
-    "alt": "Sample project photo",
-    "title": "Commercial Complex",
-    "category": "Commercial",
-    "location": "Bangalore, Karnataka"
-  },
-  {
-    "imageUrl": "assets/images/projects/sample-project.jpg",
-    "alt": "Sample project photo",
-    "title": "Residential Apartment",
+    "imageUrl": "https://raw.githubusercontent.com/Pakinbaskerp/Image_cdn/main/MLBuilder_CDN/Images/project2.jpg",
+    "alt": "Duplex house built by ML Builders in Kancheepuram",
+    "title": "Duplex House",
     "category": "Residential",
-    "location": "Salem, Tamil Nadu"
+    "location": "Kancheepuram, Tamil Nadu"
   },
   {
-    "imageUrl": "assets/images/projects/sample-project.jpg",
-    "alt": "Sample project photo",
-    "title": "Home Renovation",
-    "category": "Renovation",
-    "location": "Madurai, Tamil Nadu"
-  },
-  {
-    "imageUrl": "assets/images/projects/sample-project.jpg",
-    "alt": "Sample project photo",
-    "title": "Farm House",
+    "imageUrl": "https://raw.githubusercontent.com/Pakinbaskerp/Image_cdn/main/MLBuilder_CDN/Images/project3.jpg",
+    "alt": "Modern house built by ML Builders in Chennai",
+    "title": "Modern House",
     "category": "Residential",
-    "location": "Trichy, Tamil Nadu"
+    "location": "Chennai, Tamil Nadu"
   },
   {
-    "imageUrl": "assets/images/projects/sample-project.jpg",
-    "alt": "Sample project photo",
-    "title": "Boutique Office",
-    "category": "Commercial",
-    "location": "Erode, Tamil Nadu"
-  },
-  {
-    "imageUrl": "assets/images/projects/sample-project.jpg",
-    "alt": "Sample project photo",
-    "title": "Lakeside Villa",
+    "imageUrl": "https://raw.githubusercontent.com/Pakinbaskerp/Image_cdn/main/MLBuilder_CDN/Images/project5.jpg",
+    "alt": "Contemporary house built by ML Builders in Chennai",
+    "title": "Contemporary House",
     "category": "Residential",
-    "location": "Vellore, Tamil Nadu"
+    "location": "Chennai, Tamil Nadu"
+  },
+  {
+    "imageUrl": "https://raw.githubusercontent.com/Pakinbaskerp/Image_cdn/main/MLBuilder_CDN/Images/project6.jpg",
+    "alt": "Traditional house built by ML Builders in Kancheepuram",
+    "title": "Traditional House",
+    "category": "Residential",
+    "location": "Kancheepuram, Tamil Nadu"
+  },
+  {
+    "imageUrl": "https://raw.githubusercontent.com/Pakinbaskerp/Image_cdn/main/MLBuilder_CDN/Images/project7.jpg",
+    "alt": "Elegant house built by ML Builders in Chennai",
+    "title": "Elegant House",
+    "category": "Residential",
+    "location": "Chennai, Tamil Nadu"
+  },
+  {
+    "imageUrl": "https://raw.githubusercontent.com/Pakinbaskerp/Image_cdn/main/MLBuilder_CDN/Images/project8.jpg",
+    "alt": "Classic house built by ML Builders in Kancheepuram",
+    "title": "Classic House",
+    "category": "Residential",
+    "location": "Kancheepuram, Tamil Nadu"
+  },
+  {
+    "imageUrl": "https://raw.githubusercontent.com/Pakinbaskerp/Image_cdn/main/MLBuilder_CDN/Images/project9.jpg",
+    "alt": "Luxury house built by ML Builders in Thanjavur",
+    "title": "Luxury House",
+    "category": "Residential",
+    "location": "Thanjavur, Tamil Nadu"
+  },
+  {
+    "imageUrl": "https://raw.githubusercontent.com/Pakinbaskerp/Image_cdn/main/MLBuilder_CDN/Images/project10.jpg",
+    "alt": "Family house built by ML Builders in Tiruppur",
+    "title": "Family House",
+    "category": "Residential",
+    "location": "Tiruppur, Tamil Nadu"
+  },
+  {
+    "imageUrl": "https://raw.githubusercontent.com/Pakinbaskerp/Image_cdn/main/MLBuilder_CDN/Images/project11.jpg",
+    "alt": "Corner house built by ML Builders in Tirunelveli",
+    "title": "Corner House",
+    "category": "Residential",
+    "location": "Tirunelveli, Tamil Nadu"
+  },
+  {
+    "imageUrl": "https://raw.githubusercontent.com/Pakinbaskerp/Image_cdn/main/MLBuilder_CDN/Images/project12.jpg",
+    "alt": "Two-storey house built by ML Builders in Karur",
+    "title": "Two-Storey House",
+    "category": "Residential",
+    "location": "Karur, Tamil Nadu"
+  },
+  {
+    "imageUrl": "https://raw.githubusercontent.com/Pakinbaskerp/Image_cdn/main/MLBuilder_CDN/Images/project13.jpg",
+    "alt": "Spacious house built by ML Builders in Dindigul",
+    "title": "Spacious House",
+    "category": "Residential",
+    "location": "Dindigul, Tamil Nadu"
   }
 ]

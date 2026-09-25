@@ -21,31 +21,31 @@ export class TestimonialCardComponent {
       quote: 'Professional team with transparent pricing. Highly recommended.',
       name: 'Arun Kumar',
       role: 'Business Owner',
-      location: 'Coimbatore'
+      location: 'Kancheepuram'
     },
     {
       quote: 'Our renovation was completed beyond expectations.',
       name: 'Priya Sharma',
       role: 'Interior Client',
-      location: 'Bangalore'
+      location: 'Chennai'
     },
     {
       quote: 'Very satisfied with the construction quality.',
       name: 'Vignesh',
       role: 'Villa Owner',
-      location: 'Chennai'
+      location: 'Kancheepuram'
     },
     {
       quote: 'Excellent planning and project management.',
       name: 'Ramesh',
       role: 'Property Owner',
-      location: 'Salem'
+      location: 'Chennai'
     },
     {
       quote: 'Best construction company I have worked with.',
       name: 'Karthik',
       role: 'Customer',
-      location: 'Madurai'
+      location: 'Kancheepuram'
     }
   ];
 

@@ -40,24 +40,24 @@
   },
   "services": {
     "Residential Construction": {
-      "imageUrl": "assets/images/placeholders/service.webp",
-      "mobileImage": "assets/images/placeholders/service.webp",
-      "tabletImage": "assets/images/placeholders/service.webp"
+      "imageUrl": "https://images.unsplash.com/photo-1777104247068-ad8c489cd9e9?w=1200&q=80&fm=jpg&fit=crop&auto=format",
+      "mobileImage": "https://images.unsplash.com/photo-1777104247068-ad8c489cd9e9?w=1200&q=80&fm=jpg&fit=crop&auto=format",
+      "tabletImage": "https://images.unsplash.com/photo-1777104247068-ad8c489cd9e9?w=1200&q=80&fm=jpg&fit=crop&auto=format"
     },
     "Commercial Construction": {
-      "imageUrl": "assets/images/placeholders/service.webp",
-      "mobileImage": "assets/images/placeholders/service.webp",
-      "tabletImage": "assets/images/placeholders/service.webp"
+      "imageUrl": "https://images.unsplash.com/photo-1773300768164-fdd5621659ac?w=1200&q=80&fm=jpg&fit=crop&auto=format",
+      "mobileImage": "https://images.unsplash.com/photo-1773300768164-fdd5621659ac?w=1200&q=80&fm=jpg&fit=crop&auto=format",
+      "tabletImage": "https://images.unsplash.com/photo-1773300768164-fdd5621659ac?w=1200&q=80&fm=jpg&fit=crop&auto=format"
     },
     "Interior Fit-Outs": {
-      "imageUrl": "assets/images/placeholders/service.webp",
-      "mobileImage": "assets/images/placeholders/service.webp",
-      "tabletImage": "assets/images/placeholders/service.webp"
+      "imageUrl": "https://images.unsplash.com/photo-1761986757577-140af8859587?w=1200&q=80&fm=jpg&fit=crop&auto=format",
+      "mobileImage": "https://images.unsplash.com/photo-1761986757577-140af8859587?w=1200&q=80&fm=jpg&fit=crop&auto=format",
+      "tabletImage": "https://images.unsplash.com/photo-1761986757577-140af8859587?w=1200&q=80&fm=jpg&fit=crop&auto=format"
     },
     "Renovation Works": {
-      "imageUrl": "assets/images/placeholders/service.webp",
-      "mobileImage": "assets/images/placeholders/service.webp",
-      "tabletImage": "assets/images/placeholders/service.webp"
+      "imageUrl": "https://images.unsplash.com/photo-1632759145351-1d592919f522?w=1200&q=80&fm=jpg&fit=crop&auto=format",
+      "mobileImage": "https://images.unsplash.com/photo-1632759145351-1d592919f522?w=1200&q=80&fm=jpg&fit=crop&auto=format",
+      "tabletImage": "https://images.unsplash.com/photo-1632759145351-1d592919f522?w=1200&q=80&fm=jpg&fit=crop&auto=format"
     }
   },
   "layout": {
