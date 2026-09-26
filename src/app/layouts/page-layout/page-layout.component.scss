@@ -2,10 +2,17 @@
 section {
   position: relative;
   background: var(--ml-bg-light);
-  overflow: hidden;
 }
 
-section::before {
+.page-layout-decoration {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.page-layout-decoration::before {
   content: "";
   position: absolute;
   top: -120px;
@@ -16,7 +23,7 @@ section::before {
   background: radial-gradient(circle, rgba(3, 48, 107, .07), transparent 70%);
 }
 
-section::after {
+.page-layout-decoration::after {
   content: "";
   position: absolute;
   bottom: -140px;
@@ -29,5 +36,4 @@ section::after {
 
 .container {
   position: relative;
-  z-index: 1;
 }

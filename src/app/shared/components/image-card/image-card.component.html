@@ -1,5 +1,13 @@
 <article class="card h-100">
-  <div class="ratio ratio-16x9">
+  <div
+    class="ratio ratio-16x9 card-image-trigger"
+    role="button"
+    tabindex="0"
+    [attr.data-bs-toggle]="modalTarget ? 'modal' : null"
+    [attr.data-bs-target]="modalTarget ? '#' + modalTarget : null"
+    [attr.aria-label]="'Read more about ' + title"
+    (click)="readMore.emit()"
+    (keydown.enter)="readMore.emit()">
     <img
       appLazyImage
       class="img-fluid object-fit-cover"
@@ -25,7 +33,17 @@
     </div>
     }
 
-    <h3 class="h5 card-title">{{ title }}</h3>
+    <h3
+      class="h5 card-title card-title-trigger"
+      role="button"
+      tabindex="0"
+      [attr.data-bs-toggle]="modalTarget ? 'modal' : null"
+      [attr.data-bs-target]="modalTarget ? '#' + modalTarget : null"
+      [attr.aria-label]="'Read more about ' + title"
+      (click)="readMore.emit()"
+      (keydown.enter)="readMore.emit()">
+      {{ title }}
+    </h3>
     <p class="card-text text-secondary flex-grow-1">{{ description }}</p>
 
     <button
