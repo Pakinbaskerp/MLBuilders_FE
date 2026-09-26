@@ -9,6 +9,10 @@
   box-shadow: 0 4px 16px rgba(15, 23, 42, .06);
 }
 
+.card-image-trigger {
+  cursor: pointer;
+}
+
 .project-tile__img {
   position: absolute;
   inset: 0;
@@ -30,6 +34,7 @@
   flex-direction: column;
   justify-content: flex-end;
   padding: .75rem;
+  pointer-events: none;
 
   background: linear-gradient(
     to top,

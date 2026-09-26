@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { ImageModel } from '../../../core/models/image.model';
 import { LazyImageDirective } from '../../directives/lazy-image.directive';
 
@@ -15,4 +15,6 @@ export class ProjectCardComponent {
   @Input() title = 'Project Name';
   @Input() category = 'Residential';
   @Input() location = 'Project location';
+  @Input() modalTarget = '';
+  @Output() imageClick = new EventEmitter<void>();
 }

@@ -20,6 +20,13 @@ interface ProjectEntry {
   location: string;
 }
 
+interface ProjectViewModel {
+  title: string;
+  category: string;
+  location: string;
+  image: ImageModel;
+}
+
 @Component({
   selector: 'app-home-page',
   standalone: true,
@@ -61,10 +68,16 @@ export class HomePageComponent {
     image: SERVICE_IMAGES[link.label] ?? PLACEHOLDER_IMAGES.service
   }));
 
-  protected readonly featuredProjects = (projectsData as ProjectEntry[]).slice(0, 4).map((item) => ({
+  protected readonly featuredProjects: ProjectViewModel[] = (projectsData as ProjectEntry[]).slice(0, 4).map((item) => ({
     title: item.title,
     category: item.category,
     location: item.location,
     image: { imageUrl: item.imageUrl, alt: item.alt, loading: 'lazy' } satisfies ImageModel
   }));
+
+  protected selectedProject: ProjectViewModel = this.featuredProjects[0];
+
+  protected selectProject(item: ProjectViewModel): void {
+    this.selectedProject = item;
+  }
 }

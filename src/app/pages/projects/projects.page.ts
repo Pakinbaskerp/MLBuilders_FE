@@ -13,6 +13,13 @@ interface ProjectEntry {
   location: string;
 }
 
+interface ProjectViewModel {
+  title: string;
+  category: string;
+  location: string;
+  image: ImageModel;
+}
+
 @Component({
   selector: 'app-projects-page',
   standalone: true,
@@ -35,10 +42,16 @@ export class ProjectsPageComponent {
     );
   }
 
-  protected readonly projects = (projectsData as ProjectEntry[]).map((item) => ({
+  protected readonly projects: ProjectViewModel[] = (projectsData as ProjectEntry[]).map((item) => ({
     title: item.title,
     category: item.category,
     location: item.location,
     image: { imageUrl: item.imageUrl, alt: item.alt, loading: 'lazy' } satisfies ImageModel
   }));
+
+  protected selectedProject: ProjectViewModel = this.projects[0];
+
+  protected selectProject(item: ProjectViewModel): void {
+    this.selectedProject = item;
+  }
 }

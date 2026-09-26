@@ -1,5 +1,13 @@
 <article class="project-tile">
-  <div class="ratio ratio-4x3">
+  <div
+    class="ratio ratio-4x3 card-image-trigger"
+    role="button"
+    tabindex="0"
+    [attr.data-bs-toggle]="modalTarget ? 'modal' : null"
+    [attr.data-bs-target]="modalTarget ? '#' + modalTarget : null"
+    [attr.aria-label]="'View full image of ' + title"
+    (click)="imageClick.emit()"
+    (keydown.enter)="imageClick.emit()">
     <img
       appLazyImage
       class="project-tile__img"

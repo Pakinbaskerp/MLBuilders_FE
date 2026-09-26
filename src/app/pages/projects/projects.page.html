@@ -12,11 +12,47 @@
         [image]="item.image"
         [title]="item.title"
         [category]="item.category"
-        [location]="item.location">
+        [location]="item.location"
+        modalTarget="projectImageModal"
+        (imageClick)="selectProject(item)">
       </app-project-card>
     </div>
 
     }
 
+  </div>
+
+  <div class="modal fade" id="projectImageModal" tabindex="-1" aria-labelledby="projectImageModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
+      <div class="modal-content">
+
+        <div class="modal-header">
+          <h2 class="modal-title fs-5" id="projectImageModalLabel">{{ selectedProject.title }}</h2>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+
+        <div class="modal-body">
+
+          <div class="ratio ratio-4x3 rounded-3 overflow-hidden mb-3">
+            <img
+              [src]="selectedProject.image.imageUrl"
+              [alt]="selectedProject.image.alt"
+              class="object-fit-cover"
+            />
+          </div>
+
+          <div class="d-flex align-items-center gap-2 mb-0 small text-secondary">
+            <span class="badge rounded-pill text-bg-light text-primary">{{ selectedProject.category }}</span>
+            <span><i class="bi bi-geo-alt-fill me-1"></i>{{ selectedProject.location }}</span>
+          </div>
+
+        </div>
+
+        <div class="modal-footer">
+          <button type="button" class="btn btn-ml-outline" data-bs-dismiss="modal">Close</button>
+        </div>
+
+      </div>
+    </div>
   </div>
 </app-page-layout>
